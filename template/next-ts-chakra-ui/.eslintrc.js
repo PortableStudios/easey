@@ -25,6 +25,10 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/indent': 0,
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          { argsIgnorePattern: '^_' },
+        ],
         'object-shorthand': 0,
         'prefer-destructuring': 0,
         'import/prefer-default-export': 0,

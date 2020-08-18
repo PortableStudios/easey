@@ -5,6 +5,7 @@ import type {
   // GetServerSideProps,
   GetStaticProps,
 } from 'next';
+import { Flex, Heading } from '@chakra-ui/core';
 
 // import { Home } from '@/pages/Home';
 import generateMetaTags from '@/utils/meta';
@@ -17,9 +18,9 @@ const {{name}}: NextPage<Props> = ({ timestamp }) => {
   return (
     <>
       <Head>{generateMetaTags({ title: 'TODO' })}</Head>
-      <div role="main">
-        <h1>{timestamp}</h1>
-      </div>
+      <Flex role="main">
+        <Heading>{timestamp}</Heading>
+      </Flex>
     </>
   );
 };

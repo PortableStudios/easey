@@ -28,9 +28,9 @@
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@chakra-ui/core": "next",
+    "@chakra-ui/icon": "next",
+    "@chakra-ui/theme": "next",
     "@next/bundle-analyzer": "^9.5.0",
     "@sentry/browser": "^5.20.1",
     "@sentry/node": "^5.20.1",

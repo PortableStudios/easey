@@ -8,14 +8,14 @@ const Footer: React.FC<Props> = ({ ...rest }) => {
   return (
     <Flex
       as="footer"
-      backgroundColor="brand.almostBlack"
+      backgroundColor="portable.almostBlack"
       flexShrink={0}
       justifyContent="center"
       padding={4}
       width="100%"
       {...rest}
     >
-      <Text color="brand.warmWhite" fontSize={['xs', 'sm']}>
+      <Text color="portable.warmWhite" fontSize={['xs', 'sm']}>
         Copyright © 2020{' '}
         <Link href="https://www.portable.com.au" isExternal>
           Portable
