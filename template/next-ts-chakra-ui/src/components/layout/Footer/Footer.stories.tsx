@@ -1,13 +1,16 @@
 import React from 'react';
+import type { Story, Meta } from '@storybook/react';
 
 import Footer from './Footer';
 
 export default {
   title: 'Layout',
   component: Footer,
-};
+} as Meta;
 
-export const FooterStory = () => {
-  return <Footer />;
+type Args = React.ComponentProps<typeof Footer>;
+
+export const FooterStory: Story<Args> = (args) => {
+  return <Footer {...args} />;
 };
-FooterStory.story = { name: 'Footer' };
+FooterStory.storyName = 'Footer';

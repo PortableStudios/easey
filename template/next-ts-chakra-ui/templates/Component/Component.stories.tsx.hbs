@@ -1,13 +1,17 @@
 import React from 'react';
+import type { Story, Meta } from '@storybook/react';
 
 import {{name}} from './{{name}}';
 
 export default {
   title: '{{titleCase folder}}',
   component: {{name}},
-};
+} as Meta;
 
-export const {{name}}Story = () => {
-  return <{{name}} />;
+type Args = React.ComponentProps<typeof {{name}}>;
+
+export const {{name}}Story: Story<Args> = (args) => {
+  return <{{name}} {...args} />;
 };
-{{name}}Story.story = { name: '{{name}}' };
+{{name}}Story.storyName = '{{name}}';
+{{name}}Story.args = {};
