@@ -27,6 +27,44 @@ yarn storybook
 
 Open [http://localhost:6006](http://localhost:6006) with your browser to view your UI library.
 
+## Generating theme from Figma file
+
+If the project Figma file was created from the [Portable UI Kit](https://www.figma.com/file/m1rARkfdPU6dB7n9ofBRHw/Portable-UI-Kit) template
+you can use our [`figma2theme`](https://github.com/PortableStudios/figma2theme) tool to generate a Chakra UI theme.
+
+First, create a `.figma2themerc` file in your project containing the
+Figma file URL, here's an example using the URL of our Figma template:
+
+```json
+{
+  "fileUrl": "https://www.figma.com/file/m1rARkfdPU6dB7n9ofBRHw/Portable-UI-Kit"
+}
+```
+
+Now add your Figma API key to the `.env` file of your project.
+A key can be generated under the 'Personal Access Tokens' section of the Figma settings.
+
+```
+FIGMA_API_KEY=
+```
+
+Now run the following command:
+
+```bash
+yarn update-theme
+```
+
+This will generate a Chakra UI theme and save the file(s) to `./src/theme/_generated`.
+
+Finally, update your imports to point to the generated theme. For example:
+
+```javascript
+// default theme (old)
+import theme from '@chakra-ui/theme';
+// generated theme (new)
+import theme from '@/theme/_generated';
+```
+
 ## Code Generation
 
 [Plop](https://plopjs.com/) is included in this project to allow us to quickly generate code.

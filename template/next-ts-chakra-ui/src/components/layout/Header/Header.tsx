@@ -35,7 +35,7 @@ const Header: React.FC<Props> = ({ ...rest }) => {
   return (
     <Flex
       as="header"
-      backgroundColor="portable.almostBlack"
+      backgroundColor="gray.900"
       flexShrink={0}
       justifyContent="center"
       width="100%"
@@ -61,7 +61,7 @@ const Header: React.FC<Props> = ({ ...rest }) => {
           </Link>
         </NextLink>
         <Stack
-          color="portable.warmWhite"
+          color="white"
           direction="row"
           fontSize="2xl"
           marginTop={[2, 0]}

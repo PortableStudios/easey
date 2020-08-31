@@ -11,7 +11,7 @@ const Page: React.FC<Props> = ({ children, ...rest }) => {
   return (
     <Flex
       alignItems="center"
-      backgroundColor="portable.warmWhite"
+      backgroundColor="white"
       direction="column"
       minHeight="100%"
       {...rest}

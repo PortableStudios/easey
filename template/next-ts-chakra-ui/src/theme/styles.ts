@@ -1,6 +1,6 @@
 import type { Styles } from '@chakra-ui/theme-tools';
 
-import theme from './_generated';
+import theme from '@chakra-ui/theme';
 
 const defaultStyles = theme.styles.global;
 

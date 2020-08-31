@@ -1,15 +1,15 @@
-import generatedTheme from './_generated';
+import theme from '@chakra-ui/theme';
 import { button } from './components';
 import styles from './styles';
 
-const theme = {
-  ...generatedTheme,
+const customTheme = {
+  ...theme,
   styles: styles,
   components: {
-    ...generatedTheme.components,
+    ...theme.components,
     Button: button,
   },
 };
-export type Theme = typeof theme;
+export type Theme = typeof customTheme;
 
-export default theme;
+export default customTheme;
