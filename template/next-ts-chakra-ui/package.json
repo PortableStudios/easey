@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.4.2",
+    "@portablestudios/figma2theme": "^0.1.0",
     "@storybook/addon-a11y": "^6.0.12",
     "@storybook/addon-essentials": "^6.0.12",
     "@storybook/addon-links": "^6.0.12",
@@ -79,7 +80,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.4",
     "eslint-plugin-testing-library": "^3.3.2",
-    "figma2theme": "./figma2theme-v0.1.0.tgz",
     "husky": "^4.2.5",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
