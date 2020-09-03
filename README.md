@@ -9,7 +9,7 @@ Built using the [SAO](https://github.com/saojs/sao) framework.
 ## Usage
 
 ```bash
-npx sao PortableStudios/sao-easey my-project
+npx sao PortableStudios/sao-easey -u my-project
 ```
 
 ## Stacks

@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    '../node_modules/figma2theme/lib/**/*.stories.js',
+    '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
     '../src/**/*.stories.tsx',
   ],
   addons: [

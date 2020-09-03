@@ -1,0 +1,47 @@
+name: Run tests
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@portablestudios'
+      - name: Run SAO tests
+        run: |
+          yarn install --frozen-lockfile
+          yarn test
+      - name: Generate a Next.js project
+        run: |
+          yarn sao . test-project --answers \
+            '{ "name": "test-project", "description": "Cool project", "author": "John Smith <john@portable.com.au", "type": "nextjs" }'
+      # https://github.com/actions/setup-node#usage
+      - name: Install dependencies in project
+        working-directory: ./test-project
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        # Skip post-install scripts as malicious script could steal NODE_AUTH_TOKEN
+        run: |
+          yarn install --frozen-lockfile --ignore-scripts
+      - name: Run post-install scripts
+        working-directory: ./test-project
+        run: |
+          npm rebuild --update-binary
+      - name: Lint and test project
+        working-directory: ./test-project
+        run: |
+          yarn lint
+          yarn test --passWithNoTests
+          yarn build
+          yarn start & npx wait-on http://localhost:3000
+          yarn cypress:run
+      - name: Archive project
+        uses: actions/upload-artifact@v2
+        with:
+          name: project
+          path: |
+            test-project/**
+            !**/node_modules/**
