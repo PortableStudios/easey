@@ -1754,7 +1754,7 @@
     "@types/react-transition-group" "4.4.0"
     react-transition-group "4.4.1"
 
-"@chakra-ui/utils@1.0.0-rc.3":
+"@chakra-ui/utils@1.0.0-rc.3", "@chakra-ui/utils@^1.0.0-rc.3":
   version "1.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/@chakra-ui/utils/-/utils-1.0.0-rc.3.tgz#6c0252549926edd4a0d47d676a883275d37474dc"
   integrity sha512-kBb5BNbn51j+u1OvkTDyKUVfHwQqmuYwMsvWSNmdFvhQdPqOkEuuXDwfU2kTezNw21ZkCxKmHcj9/Ol7u33xEQ==
