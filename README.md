@@ -6,6 +6,10 @@ boilerplate and start working on the real meat of our projects as soon as possib
 
 Built using the [SAO](https://github.com/saojs/sao) framework.
 
+> ⚠️ **Warning:** The Next.js stack is currently using a pre-release version of [Chakra UI v1](https://next.chakra-ui.com/).
+>
+> If your generated project is intended for production, please consider downgrading to [Chakra UI v0.8](https://chakra-ui.com/).
+
 ## Usage
 
 ```bash
