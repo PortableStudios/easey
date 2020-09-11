@@ -1,22 +1,23 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Flex, Heading } from '@chakra-ui/core';
+import { Button, Flex, Heading } from '@chakra-ui/core';
 import type { FlexProps } from '@chakra-ui/core';
 
 import { Page } from '@/components/layout';
-import { Button } from '@/components/ui';
 
 type Props = FlexProps;
 
-const Error404: React.FC<Props> = ({ children, ...rest }) => {
+const Error404: React.FC<Props> = ({ ...rest }) => {
   return (
-    <Page {...rest}>
+    <Page backgroundColor="portable.almostBlack" {...rest}>
       <Flex direction="column" margin="auto" padding={8}>
-        <Heading as="h1" marginBottom={4}>
+        <Heading as="h1" color="white" fontSize="3xl" marginBottom={4}>
           Page not found
         </Heading>
         <NextLink href="/" passHref>
-          <Button as="a">Back to home</Button>
+          <Button as="a" colorScheme="white">
+            Back to home
+          </Button>
         </NextLink>
       </Flex>
     </Page>

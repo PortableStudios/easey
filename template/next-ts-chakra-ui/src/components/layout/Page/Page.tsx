@@ -11,7 +11,7 @@ const Page: React.FC<Props> = ({ children, ...rest }) => {
   return (
     <Flex
       alignItems="center"
-      backgroundColor="brand.warmWhite"
+      backgroundColor="portable.warmWhite"
       direction="column"
       minHeight="100%"
       {...rest}
@@ -21,7 +21,7 @@ const Page: React.FC<Props> = ({ children, ...rest }) => {
         as="main"
         flexGrow={1}
         flexShrink={0}
-        maxWidth="contentMax"
+        maxWidth="1024px"
         width="100%"
       >
         {children}

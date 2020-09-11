@@ -3,6 +3,13 @@ import NextLink from 'next/link';
 import { Flex, Icon, Image, Link, Stack } from '@chakra-ui/core';
 import type { FlexProps, LinkProps } from '@chakra-ui/core';
 
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YouTubeIcon,
+} from '@/theme/icons';
+
 type Props = FlexProps;
 
 const SocialLink: React.FC<LinkProps & { alt: string; href: string }> = ({
@@ -28,7 +35,7 @@ const Header: React.FC<Props> = ({ ...rest }) => {
   return (
     <Flex
       as="header"
-      backgroundColor="brand.almostBlack"
+      backgroundColor="portable.almostBlack"
       flexShrink={0}
       justifyContent="center"
       width="100%"
@@ -38,7 +45,7 @@ const Header: React.FC<Props> = ({ ...rest }) => {
         alignItems="center"
         direction={['column', 'row']}
         justifyContent="space-between"
-        maxWidth="contentMax"
+        maxWidth="1024px"
         padding={6}
         paddingBottom={[3, 6]}
         width="100%"
@@ -54,9 +61,9 @@ const Header: React.FC<Props> = ({ ...rest }) => {
           </Link>
         </NextLink>
         <Stack
-          color="brand.warmWhite"
+          color="portable.warmWhite"
+          direction="row"
           fontSize="2xl"
-          isInline
           marginTop={[2, 0]}
           spacing={2}
         >
@@ -64,25 +71,25 @@ const Header: React.FC<Props> = ({ ...rest }) => {
             alt="Visit Portable's Facebook page"
             href="https://www.facebook.com/portable/"
           >
-            <Icon name="facebook" />
+            <Icon as={FacebookIcon} />
           </SocialLink>
           <SocialLink
             alt="Visit Portable's Instagram page"
             href="https://www.instagram.com/portable/"
           >
-            <Icon name="instagram" />
+            <Icon as={InstagramIcon} />
           </SocialLink>
           <SocialLink
             alt="Visit Portable's Twitter page"
             href="https://twitter.com/Portable"
           >
-            <Icon name="twitter" />
+            <Icon as={TwitterIcon} />
           </SocialLink>
           <SocialLink
             alt="Visit Portable's YouTube page"
             href="https://www.youtube.com/channel/UCRL26DPexiRaRvixhn-GGpw"
           >
-            <Icon name="youtube" />
+            <Icon as={YouTubeIcon} />
           </SocialLink>
         </Stack>
       </Flex>
