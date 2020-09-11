@@ -45,7 +45,8 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.4.5",
