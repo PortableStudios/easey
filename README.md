@@ -9,8 +9,19 @@ Built using the [SAO](https://github.com/saojs/sao) framework.
 ## Usage
 
 ```bash
-npx sao PortableStudios/sao-easey my-project
+npx sao PortableStudios/sao-easey -u my-project
 ```
+
+> ⚠️ **Warning:** The Next.js stack is currently using a pre-release version of [Chakra UI v1](https://next.chakra-ui.com/).
+>
+> If your generated project is intended for production, please consider downgrading to [Chakra UI v0.8](https://chakra-ui.com/).
+>
+>To use the version of the scaffolding kit that includes Chakra UI v0.8, run the following command:
+>
+>```
+>npx sao PortableStudios/sao-easey#chakra0.8 -u my-project
+>```
+
 
 ## Stacks
 
