@@ -2,9 +2,10 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
+    "sourceMap": false,
     "isolatedModules": false,
     "jsx": "react",
-    "types": ["cypress", "@types/testing-library__cypress"]
+    "types": ["cypress", "@testing-library/cypress"]
   },
   "include": ["./**/*"],
   "exclude": ["node_modules"]
