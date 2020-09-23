@@ -1,17 +1,9 @@
 const superb = require('superb');
 
-const STACKS = [
+const stacks = [
   {
-    name: 'Front end (Next.js, with Chakra UI)',
-    value: 'CHAKRA',
-  },
-  {
-    name: 'API (coming soon)',
-    value: 'API',
-  },
-  {
-    name: 'Fullstack (coming soon)',
-    value: 'FS',
+    name: 'Front End (Next.js, with Chakra UI)',
+    value: 'nextjs',
   },
 ];
 
@@ -19,32 +11,33 @@ module.exports = {
   prompts() {
     return [
       {
-        name: 'meta.name',
+        name: 'name',
         message: 'What is the name of the new project',
         default: this.outFolder,
         filter: (val) => val.toLowerCase(),
       },
       {
-        name: 'meta.description',
+        name: 'description',
         message: 'How would you describe the new project',
-        default: `my ${superb()} project`,
+        default: `my ${superb.random()} project`,
       },
       {
-        name: 'meta.author',
-        message: 'What is your email?',
-        default: this.gitUser.email,
+        name: 'author',
+        message:
+          'What is your name and email? (e.g. John Smith <john@portable.com.au>)',
+        default: `${this.gitUser.name} <${this.gitUser.email}>`,
         store: true,
       },
       {
-        name: 'stack.type',
+        name: 'type',
         message: 'What is your stack?',
         type: 'list',
-        choices: STACKS,
+        choices: stacks,
       },
     ];
   },
   actions() {
-    const { meta, stack } = this.answers;
+    const { type, name, description, author } = this.answers;
 
     return [
       // Copy the common files over
@@ -58,7 +51,7 @@ module.exports = {
         type: 'add',
         files: '**',
         templateDir: './template/next-ts-chakra-ui',
-        when: () => ['CHAKRA'].includes(stack.type),
+        when: () => type === 'nextjs',
       },
       // Update package contents with answers
       {
@@ -66,9 +59,10 @@ module.exports = {
         files: 'package.json',
         handler(data) {
           return {
-            name: meta.name,
-            description: meta.description,
-            author: `<${meta.author}>`,
+            name: name,
+            description: description,
+            author: author,
+            contributors: [author],
             ...data,
           };
         },
@@ -77,7 +71,6 @@ module.exports = {
   },
   async completed() {
     this.gitInit();
-    await this.npmInstall();
     this.showProjectTips();
   },
 };

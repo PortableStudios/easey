@@ -1,4 +1,4 @@
-# <%= meta.name %>
+# <%= name %>
 
 This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) project bootstrapped with Portable's [`easey`](https://github.com/PortableStudios/sao-easey) generator.
 
