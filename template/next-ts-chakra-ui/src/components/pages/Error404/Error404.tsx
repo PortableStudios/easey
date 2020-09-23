@@ -1,5 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa';
 import { Button, Flex, Heading } from '@chakra-ui/core';
 import type { FlexProps } from '@chakra-ui/core';
 
@@ -15,7 +16,7 @@ const Error404: React.FC<Props> = ({ ...rest }) => {
           Page not found
         </Heading>
         <NextLink href="/" passHref>
-          <Button as="a" colorScheme="white">
+          <Button as="a" colorScheme="white" leftIcon={<FaArrowLeft />}>
             Back to home
           </Button>
         </NextLink>

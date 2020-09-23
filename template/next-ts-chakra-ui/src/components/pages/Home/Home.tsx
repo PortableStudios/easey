@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import NextLink from 'next/link';
-import { Button, Heading, Link, Stack, Text } from '@chakra-ui/core';
+import { GoHeart, GoMail } from 'react-icons/go';
+import { FaArrowCircleRight } from 'react-icons/fa';
+import { Button, Heading, Icon, Link, Stack, Text } from '@chakra-ui/core';
 import type { FlexProps } from '@chakra-ui/core';
 
 import { Page } from '@/components/layout';
@@ -16,22 +18,29 @@ const Home: React.FC<Props> = ({ timestamp, ...rest }) => {
     <Page {...rest}>
       <Stack marginX="auto" padding={4} spacing={4}>
         <Heading as="h1" fontSize={['2xl', '3xl']}>
-          Lorem ipsum
+          Welcome to your new project <Icon as={GoHeart} />
         </Heading>
-        <Stack alignItems="flex-start" direction="column" spacing={2}>
-          <Button size="lg" onClick={() => setUpdated(new Date().getTime())}>
+        <Stack alignItems="center" direction="row" spacing={2}>
+          <Button
+            size="sm"
+            flexShrink={0}
+            rightIcon={<FaArrowCircleRight />}
+            onClick={() => setUpdated(new Date().getTime())}
+          >
             Update
           </Button>
-          <Heading as="h2" fontSize={['lg', 'xl']}>
+          <Heading as="h2" fontSize={['sm', 'md', 'lg']}>
             {updatedTimestamp === null
-              ? `This page was generated at ${iso(timestamp)}.`
-              : `This page was updated at ${iso(updatedTimestamp)}.`}
+              ? `Page generated at ${iso(timestamp)}.`
+              : `Page updated at ${iso(updatedTimestamp)}.`}
           </Heading>
         </Stack>
         <Stack fontSize={['sm', 'md']} spacing={2}>
           <NextLink href="/404" passHref>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <Link>Click here to contact us.</Link>
+            <Link color="blue.700" sx={{ _hover: { color: 'blue.900' } }}>
+              <Icon as={GoMail} mb="0.1em" /> Click here to contact us
+            </Link>
           </NextLink>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
