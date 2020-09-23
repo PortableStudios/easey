@@ -1,27 +1,24 @@
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
+import type { StoryWrapper } from '@storybook/addons';
 
 import AppProvider from '@/components/AppProvider';
 import MockRouterProvider from '@/utils/testing/MockRouterProvider';
 
-addDecorator((storyFn) => (
-  <MockRouterProvider>
-    <AppProvider>{storyFn()}</AppProvider>
-  </MockRouterProvider>
-));
-addDecorator(
-  withKnobs({
-    escapeHTML: false,
-  })
-);
-addDecorator(withA11y);
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-addDecorator(withScreenshot as () => any);
-addParameters({
+const withProviders: StoryWrapper = (Story, context) => {
+  return (
+    <MockRouterProvider>
+      <AppProvider>
+        <Story {...context} />
+      </AppProvider>
+    </MockRouterProvider>
+  );
+};
+
+export const decorators = [withProviders, withScreenshot];
+
+export const parameters = {
   options: {
     // Sort categories alphabetically
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -122,4 +119,4 @@ addParameters({
       },
     },
   },
-});
+};
