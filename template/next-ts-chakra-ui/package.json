@@ -34,7 +34,7 @@
     "@chakra-ui/theme": "^1.0.0-rc.3",
     "@chakra-ui/utils": "^1.0.0-rc.3",
     "@next/bundle-analyzer": "^9.5.3",
-    "@sentry/browser": "^5.22.3",
+    "@sentry/browser": "^5.24.2",
     "@sentry/node": "^5.24.2",
     "@sentry/webpack-plugin": "^1.12.1",
     "@types/gtag.js": "^0.0.3",
