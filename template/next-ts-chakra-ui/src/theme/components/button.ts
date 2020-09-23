@@ -1,7 +1,7 @@
 // Example of how to customise the Chakra UI Button component
 // View the default theme: https://github.com/chakra-ui/chakra-ui/blob/develop/packages/theme/src/components/button.ts
 
-import theme from '../_generated';
+import theme from '@chakra-ui/theme';
 
 const defaultButton = theme.components.Button;
 
@@ -21,14 +21,14 @@ function variantCustom(props: Dict) {
   let hoverBackgroundColor;
   switch (c) {
     case 'white':
-      textColor = 'portable.almostBlack';
-      backgroundColor = 'portable.warmWhite';
+      textColor = 'gray.900';
+      backgroundColor = 'white';
       hoverBackgroundColor = 'gray.100';
       break;
     case 'black':
     default:
-      textColor = 'portable.warmWhite';
-      backgroundColor = 'portable.almostBlack';
+      textColor = 'white';
+      backgroundColor = 'gray.900';
       hoverBackgroundColor = 'black';
       break;
   }
@@ -51,11 +51,10 @@ const sizes = {
   ...defaultButton.sizes,
 };
 
+// Change the default variant to "custom" rather than "solid"
 const defaultProps = {
   ...defaultButton.defaultProps,
-  size: 'md',
   variant: 'custom',
-  colorScheme: 'black',
 };
 
 const button = {

@@ -9,7 +9,7 @@ type Props = FlexProps;
 
 const Error404: React.FC<Props> = ({ ...rest }) => {
   return (
-    <Page backgroundColor="portable.almostBlack" {...rest}>
+    <Page backgroundColor="gray.900" {...rest}>
       <Flex direction="column" margin="auto" padding={8}>
         <Heading as="h1" color="white" fontSize="3xl" marginBottom={4}>
           Page not found

@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "plop": "plop",
+    "update-theme": "figma2theme generate-chakra -o ./src/theme/_generated",
     "lint": "eslint . --fix --ext .js,.ts,.tsx",
     "typecheck": "tsc -p ./tsconfig.json --noEmit & tsc -p ./cypress/tsconfig.json --noEmit",
     "storybook": "start-storybook -p 6006 -s ./public",
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.4.2",
+    "@portablestudios/figma2theme": "^0.1.0",
     "@storybook/addon-a11y": "^6.0.12",
     "@storybook/addon-essentials": "^6.0.12",
     "@storybook/addon-links": "^6.0.12",

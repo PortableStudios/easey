@@ -1,5 +1,8 @@
 module.exports = {
-  stories: ['../src/**/*.stories.tsx'],
+  stories: [
+    '../node_modules/figma2theme/lib/**/*.stories.js',
+    '../src/**/*.stories.tsx',
+  ],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-viewport',
