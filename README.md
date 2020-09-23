@@ -23,6 +23,30 @@ npx sao PortableStudios/sao-easey -u my-project
 >```
 
 
+## Development
+
+First, ensure you can install private Portable packages by following [the authentication steps in our `figma2theme` repo](https://github.com/PortableStudios/figma2theme).
+
+You can test the tool locally by running the following command from the parent directory:
+
+```bash
+npx sao ./sao-easey -u my-project
+```
+
+The easiest way to make changes to the templates while testing
+them is running the following commands from the parent directory:
+
+```bash
+npx sao ./sao-easey -u my-project
+cd my-project
+yarn install
+git add .
+git commit -m "Initial commit"
+```
+
+Now any changes you make to the project can be viewed
+in Git and copied back to the template after testing.
+
 ## Stacks
 
 ### Frontend
