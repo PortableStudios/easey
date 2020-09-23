@@ -3,7 +3,7 @@ import { createIcon } from '@chakra-ui/icon';
 
 // Custom icons for Chakra UI
 // Tip: Convert from SVG to JSX using https://transform.tools/
-// https://next.chakra-ui.com/docs/components/icon#adding-custom-icons
+// https://next.chakra-ui.com/docs/components/icon#creating-icons-using-the-createicon-function
 
 export const FacebookIcon = createIcon({
   displayName: 'FacebookIcon',

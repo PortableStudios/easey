@@ -1,18 +1,21 @@
+import theme from '@chakra-ui/theme';
+import { runIfFn, merge } from '@chakra-ui/utils';
 import type { Styles } from '@chakra-ui/theme-tools';
 
-import theme from '@chakra-ui/theme';
-
-const defaultStyles = theme.styles.global;
-
+// Extend the default global styles
 const styles: Styles = {
-  ...theme.styles,
-  global: (props) => ({
-    ...(typeof defaultStyles === 'object' && defaultStyles),
-    ...(typeof defaultStyles === 'function' && defaultStyles(props)),
-    'html, body, #root, #__next': {
-      height: '100%',
-    },
-  }),
+  global: (props) =>
+    merge(runIfFn(theme.styles.global, props), {
+      html: {
+        height: '100%',
+      },
+      body: {
+        height: '100%',
+      },
+      '#root, #__next': {
+        height: '100%',
+      },
+    }),
 };
 
 export default styles;
