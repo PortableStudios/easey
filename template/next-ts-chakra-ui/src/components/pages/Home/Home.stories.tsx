@@ -4,7 +4,7 @@ import type { Story, Meta } from '@storybook/react';
 import Home from './Home';
 
 export default {
-  title: 'Pages',
+  title: 'Pages/Home',
   component: Home,
   parameters: {
     layout: 'fullscreen',
@@ -15,11 +15,9 @@ export default {
 } as Meta;
 
 type Args = React.ComponentProps<typeof Home>;
+const Template: Story<Args> = (args) => <Home {...args} />;
 
-export const HomeStory: Story<Args> = (args) => {
-  return <Home {...args} />;
-};
-HomeStory.storyName = 'Home';
-HomeStory.args = {
+export const Default = Template.bind({});
+Default.args = {
   timestamp: new Date().getTime(),
 };
