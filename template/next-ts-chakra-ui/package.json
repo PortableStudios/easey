@@ -29,7 +29,7 @@
     "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-rc.3",
+    "@chakra-ui/core": "^1.0.0-rc.5",
     "@chakra-ui/icon": "^1.0.0-rc.3",
     "@chakra-ui/theme": "^1.0.0-rc.3",
     "@chakra-ui/utils": "^1.0.0-rc.3",
