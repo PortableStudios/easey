@@ -28,7 +28,12 @@ const Card: React.FC<Props> = ({ title, description, link, ...rest }) => {
         <Text fontSize={{ base: 'lg', lg: 'xl' }}>{description}</Text>
       )}
       {link && (
-        <Link href={link.url} fontSize={rem('15px')} textDecoration="underline">
+        <Link
+          href={link.url}
+          fontSize={rem('15px')}
+          textDecoration="underline"
+          isExternal
+        >
           {link.label}
         </Link>
       )}

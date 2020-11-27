@@ -13,6 +13,7 @@ const Page: React.FC<Props> = ({ children, ...rest }) => {
       alignItems="center"
       backgroundColor="white"
       direction="column"
+      height="100%"
       minHeight="100%"
       {...rest}
     >

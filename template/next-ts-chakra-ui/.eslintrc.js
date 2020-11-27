@@ -23,6 +23,7 @@ module.exports = {
         'react/jsx-props-no-spreading': 0,
         'react/jsx-one-expression-per-line': 0,
         'react/jsx-indent': 0,
+        '@typescript-eslint/comma-dangle': 0,
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/indent': 0,

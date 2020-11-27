@@ -17,7 +17,7 @@ const Home: React.FC<Props> = ({ timestamp, ...rest }) => {
   const iso = (ts: number) => new Date(ts).toISOString();
   return (
     <Page {...rest}>
-      <Stack marginX="auto" padding={4} spacing={4}>
+      <Stack marginX="auto" padding={4} spacing={4} width="100%">
         <Heading as="h1" fontSize={['2xl', '3xl']}>
           Welcome to your new project <Icon as={GoHeart} />
         </Heading>
