@@ -5,6 +5,7 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 import { Button, Heading, Icon, Link, Stack, Text } from '@chakra-ui/core';
 import type { FlexProps } from '@chakra-ui/core';
 
+import { Card } from '@/components/ui';
 import { Page } from '@/components/layout';
 
 type Props = {
@@ -35,7 +36,7 @@ const Home: React.FC<Props> = ({ timestamp, ...rest }) => {
               : `Page updated at ${iso(updatedTimestamp)}.`}
           </Heading>
         </Stack>
-        <Stack fontSize={['sm', 'md']} spacing={2}>
+        <Stack fontSize={['sm', 'md']} spacing={4}>
           <NextLink href="/404" passHref>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link color="blue.700" sx={{ _hover: { color: 'blue.900' } }}>
@@ -64,6 +65,16 @@ const Home: React.FC<Props> = ({ timestamp, ...rest }) => {
             condimentum, id aliquet dolor venenatis. Pellentesque ac neque et mi
             posuere tristique.
           </Text>
+          <Card
+            title="Lorem ipsum"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum fringilla eleifend. Donec auctor blandit commodo. Ut id tellus placerat, rutrum diam sed, pretium magna."
+            link={{
+              label: 'View repository',
+              url: 'https://github.com/PortableStudios/sao-easey',
+            }}
+            backgroundColor="gray.900"
+            color="white"
+          />
         </Stack>
       </Stack>
     </Page>
