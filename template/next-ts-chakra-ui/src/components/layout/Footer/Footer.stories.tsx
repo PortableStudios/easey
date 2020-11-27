@@ -4,13 +4,15 @@ import type { Story, Meta } from '@storybook/react';
 import Footer from './Footer';
 
 export default {
-  title: 'Layout',
+  title: 'Layout/Footer',
   component: Footer,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 type Args = React.ComponentProps<typeof Footer>;
+const Template: Story<Args> = (args) => <Footer {...args} />;
 
-export const FooterStory: Story<Args> = (args) => {
-  return <Footer {...args} />;
-};
-FooterStory.storyName = 'Footer';
+export const Default = Template.bind({});
+Default.args = {};

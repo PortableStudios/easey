@@ -4,13 +4,15 @@ import type { Story, Meta } from '@storybook/react';
 import Page from './Page';
 
 export default {
-  title: 'Layout',
+  title: 'Layout/Page',
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 type Args = React.ComponentProps<typeof Page>;
+const Template: Story<Args> = (args) => <Page {...args} />;
 
-export const PageStory: Story<Args> = (args) => {
-  return <Page {...args} />;
-};
-PageStory.storyName = 'Page';
+export const Default = Template.bind({});
+Default.args = {};
