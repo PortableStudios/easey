@@ -2,26 +2,31 @@
 require('dotenv').config();
 const SentryWebpackPlugin = require('@sentry/webpack-plugin');
 const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
-const sourceMaps = require('@zeit/next-source-maps')();
-const transpileModules = require('next-transpile-modules')(['react-spring']);
-const bundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+const sourceMapsPlugin = require('@zeit/next-source-maps');
+const bundleAnalyzerPlugin = require('@next/bundle-analyzer');
+const optimizedImagesPlugin = require('next-optimized-images');
+const transpileModulesPlugin = require('next-transpile-modules');
+
+const transpileModules = require('./transpileModules');
 
 module.exports = withPlugins(
   [
+    sourceMapsPlugin(),
+    transpileModulesPlugin(transpileModules),
     [
-      optimizedImages,
+      bundleAnalyzerPlugin,
+      {
+        enabled: process.env.ANALYZE === 'true',
+      },
+    ],
+    [
+      optimizedImagesPlugin,
       {
         optimizeImagesInDev: true,
         // https://github.com/cyrilwanner/next-optimized-images/issues/114#issuecomment-634940408
         imagesFolder: 'chunks/images',
       },
     ],
-    bundleAnalyzer,
-    sourceMaps,
-    transpileModules,
   ],
   {
     poweredByHeader: false,
