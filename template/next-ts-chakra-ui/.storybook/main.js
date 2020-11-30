@@ -5,8 +5,7 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: [
-    // TODO: Uncomment once figma2theme is updated
-    // '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
+    '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
     '../src/**/*.stories.tsx',
   ],
   addons: [
