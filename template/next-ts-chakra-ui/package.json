@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.4.11",
-    "@portablestudios/figma2theme": "^0.3.0",
+    "@portablestudios/figma2theme": "0.4.1",
     "@storybook/addon-a11y": "^6.1.9",
     "@storybook/addon-essentials": "^6.1.9",
     "@storybook/addon-links": "^6.1.9",
