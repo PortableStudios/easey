@@ -18,7 +18,7 @@ npx sao PortableStudios/sao-easey -u my-project
 > however they worked fine after being built and run in production mode. Whether this
 > remains true for your project _may_ depend on which Chakra UI components you use.
 >
-> Follow this GitHub issues for updates:
+> Follow this GitHub issue for updates:
 >
 > https://github.com/chakra-ui/chakra-ui/issues/2498
 
