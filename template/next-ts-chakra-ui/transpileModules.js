@@ -2,6 +2,8 @@
 // Used to modify the Webpack configs of Next.js and Storybook (see: next.config.js and .storybook/main.js)
 module.exports = [
   'next',
+  'dequal',
+  'framesync',
   'toasted-notes',
   '@chakra-ui/(.*)', // all Chakra UI modules
   '@react-aria/(.*)', // all React ARIA modules

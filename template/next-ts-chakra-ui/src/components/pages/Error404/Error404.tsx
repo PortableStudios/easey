@@ -1,8 +1,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
-import { Button, Flex, Heading, Stack } from '@chakra-ui/core';
-import type { FlexProps } from '@chakra-ui/core';
+import { Button, Flex, Heading, Stack } from '@chakra-ui/react';
+import type { FlexProps } from '@chakra-ui/react';
 
 import { Page } from '@/components/layout';
 
