@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Flex, Icon, Image, Link, Stack } from '@chakra-ui/core';
-import type { FlexProps, LinkProps } from '@chakra-ui/core';
+import { Flex, Icon, Image, Link, Stack } from '@chakra-ui/react';
+import type { FlexProps, LinkProps } from '@chakra-ui/react';
 
 import {
   FacebookIcon,

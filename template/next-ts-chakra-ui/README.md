@@ -88,7 +88,7 @@ Finally, update your imports to point to the generated theme. For example:
 
 ```javascript
 // default theme (old)
-import theme from '@chakra-ui/theme';
+import { theme } from '@chakra-ui/react';
 // generated theme (new)
 import theme from '@/theme/_generated';
 ```
@@ -167,7 +167,7 @@ To learn more about Next.js, take a look at the following resources:
 
 To learn more about Chakra UI, take a look at the following resources:
 
-- [Documentation](https://next.chakra-ui.com/docs/getting-started) - learn about Chakra UI features and API
+- [Documentation](https://chakra-ui.com/docs/getting-started) - learn about Chakra UI features and API
 - [Storybook](https://chakra-ui.netlify.app/) - preview the 40+ components provided by Chakra UI, with examples
 - [GitHub](https://github.com/chakra-ui/chakra-ui/)
 
@@ -175,7 +175,8 @@ To learn more about Chakra UI, take a look at the following resources:
 
 To learn more about Storybook, take a look at the following resources:
 
-- [Documentation](https://storybook.js.org/docs/react/get-started/) - learn about Storybook features and API
+- [Documentation](https://storybook.js.org/docs/react/get-started/introduction) - learn about Storybook features and API
+- [Learn Storybook](https://www.learnstorybook.com/) - free in-depth guides, made by the Storybook maintainers
 - [GitHub](https://github.com/storybookjs/storybook)
 
 ## Commands

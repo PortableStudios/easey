@@ -1,6 +1,6 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/core';
-import type { FlexProps } from '@chakra-ui/core';
+import { Flex } from '@chakra-ui/react';
+import type { FlexProps } from '@chakra-ui/react';
 
 import Footer from '../Footer';
 import Header from '../Header';

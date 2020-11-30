@@ -1,6 +1,6 @@
 import React from 'react';
-import { Heading, Link, Stack, Text } from '@chakra-ui/core';
-import type { StackProps } from '@chakra-ui/core';
+import { Heading, Link, Stack, Text } from '@chakra-ui/react';
+import type { StackProps } from '@chakra-ui/react';
 
 import { rem } from 'polished';
 

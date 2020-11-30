@@ -12,16 +12,15 @@ Built using the [SAO](https://github.com/saojs/sao) framework.
 npx sao PortableStudios/sao-easey -u my-project
 ```
 
-> ⚠️ **Warning:** The Next.js stack is currently using a pre-release version of [Chakra UI v1](https://next.chakra-ui.com/).
+> ⚠️ **Warning:** The Next.js stack may currently have some IE11 compatibility issues.
 >
-> If your generated project is intended for production, please consider downgrading to [Chakra UI v0.8](https://chakra-ui.com/).
+> When last tested, the app and Storybook would not load in IE11 when run in _dev mode_,
+> however they worked fine after being built and run in production mode. Whether this
+> remains true for your project _may_ depend on which Chakra UI components you use.
 >
->To use the version of the scaffolding kit that includes Chakra UI v0.8, run the following command:
+> Follow this GitHub issues for updates:
 >
->```
->npx sao PortableStudios/sao-easey#chakra0.8 -u my-project
->```
-
+> https://github.com/chakra-ui/chakra-ui/issues/2498
 
 ## Development
 

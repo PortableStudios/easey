@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import NextLink from 'next/link';
 import { GoHeart, GoMail } from 'react-icons/go';
 import { FaArrowCircleRight } from 'react-icons/fa';
-import { Button, Heading, Icon, Link, Stack, Text } from '@chakra-ui/core';
-import type { FlexProps } from '@chakra-ui/core';
+import { Button, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import type { FlexProps } from '@chakra-ui/react';
 
 import { Card } from '@/components/ui';
 import { Page } from '@/components/layout';

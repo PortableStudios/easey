@@ -1,6 +1,6 @@
 import React from 'react';
-import { Flex, Link, Text } from '@chakra-ui/core';
-import type { FlexProps } from '@chakra-ui/core';
+import { Flex, Link, Text } from '@chakra-ui/react';
+import type { FlexProps } from '@chakra-ui/react';
 
 type Props = FlexProps;
 
