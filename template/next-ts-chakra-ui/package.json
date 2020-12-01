@@ -35,7 +35,7 @@
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "@next/bundle-analyzer": "^10.0.3",
-    "@portablestudios/chakra-flexboxgrid": "^0.2.1",
+    "@portablestudios/chakra-flexboxgrid": "^0.3.0",
     "@sentry/browser": "^5.27.6",
     "@sentry/node": "^5.27.6",
     "@sentry/webpack-plugin": "^1.13.0",
