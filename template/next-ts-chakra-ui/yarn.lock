@@ -2237,10 +2237,15 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.4.tgz#de25b5da9f727985a3757fd59b5d028aba75841a"
   integrity sha512-ZpKr+WTb8zsajqgDkvCEWgp6d5eJT6Q63Ng2neTbzBO76Lbe91vX/iVIW9dikq+Fs3yEo+ls4cxeXABD2LtcbQ==
 
-"@portablestudios/figma2theme@0.4.1":
-  version "0.4.1"
-  resolved "https://npm.pkg.github.com/download/@portablestudios/figma2theme/0.4.1/095c9ae31ac2baa4cc5e5b81c5005f7d017ca9d9d21f5bbcffae461f17efaad9#1b9699ce4c8cefaec909563c38988b2d17fcb0db"
-  integrity sha512-RgFz4rfCdIkMavcnUpx1msvAClK2s7z1CiGc2JTEn8+6x0qyo4m7PWdCZHXIUm4E//2kfOG9dUjzHPyfy3y7Jg==
+"@portablestudios/chakra-flexboxgrid@^0.2.1":
+  version "0.2.1"
+  resolved "https://npm.pkg.github.com/download/@portablestudios/chakra-flexboxgrid/0.2.1/01af8ca02cd7431a7ebeefd9f69297940e2b7ed26f59465114a730a2d4360b6a#00bdbb0993b7d525071afc41231356f967556703"
+  integrity sha512-/g1fkiGdqBh6E018UUQpM/WSE/GJn7GaXvFJ6Dp8Qq5GTZnjqWXezd3I2MakOYVpZFUW/jnWGtZnhC5x8wb5LA==
+
+"@portablestudios/figma2theme@^0.4.2":
+  version "0.4.2"
+  resolved "https://npm.pkg.github.com/download/@portablestudios/figma2theme/0.4.2/d7d91605977194c7ec71e2014fce96a89c1057504be9e657390cad8563bd8b3d#6ec9e083cceece5ce37f191616dc74a0082f5df6"
+  integrity sha512-mkzWK6TDs8kM7Wia11klexhvyAtDh2c5F6favU6u1ihthKsiM/+l6ChcqQDTmnxhhCFPGNZQ2P/a7iPBfXYzhg==
   dependencies:
     "@types/color-convert" "^1.9.0"
     "@types/ejs" "^3.0.5"

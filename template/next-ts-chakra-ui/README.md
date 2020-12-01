@@ -93,6 +93,10 @@ import { theme } from '@chakra-ui/react';
 import theme from '@/theme/_generated';
 ```
 
+If the Figma project includes layout grid styles, the script will also generate a
+`grids.ts` file which will contain "grid config" objects corresponding to each style.
+These configs can be used with our [chakra-flexboxgrid](https://github.com/PortableStudios/chakra-flexboxgrid) library.
+
 ## Code Generation
 
 [Plop](https://plopjs.com/) is included in this project to allow us to quickly generate code.
@@ -124,6 +128,7 @@ The following features were included in this project by Portable's [`easey`](htt
   - Default theme extended with examples (global styles, custom icons, component theming, etc.)
   - [`react-icons`](https://github.com/react-icons/react-icons) library for access to a variety of icon sets
 - [figma2theme](https://github.com/PortableStudios/figma2theme), our custom tool for fetching design tokens from Figma
+- [chakra-flexboxgrid](https://github.com/PortableStudios/chakra-flexboxgrid), our custom Chakra UI components for creating flexbox-based grids
 - [Storybook](https://storybook.js.org/) tool, with:
   - Pre-installed addons: viewport, a11y, etc. [(more info)](https://storybook.js.org/addons/)
   - Example stories for pages and components (see `*.stories.tsx` files)
