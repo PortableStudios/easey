@@ -52,7 +52,7 @@
     "react-icons": "^4.1.0"
   },
   "devDependencies": {
-    "@cypress/webpack-preprocessor": "^5.4.11",
+    "@cypress/webpack-preprocessor": "^5.5.0",
     "@portablestudios/figma2theme": "^0.4.2",
     "@storybook/addon-a11y": "^6.1.9",
     "@storybook/addon-essentials": "^6.1.9",
