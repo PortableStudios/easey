@@ -29,7 +29,7 @@
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "ava": "^3.13.0",
-    "husky": "^4.3.0",
+    "husky": "^4.3.6",
     "sao": "^1.7.1"
   }
 }
