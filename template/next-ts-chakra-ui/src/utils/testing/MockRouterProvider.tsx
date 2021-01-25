@@ -21,6 +21,7 @@ const mockRouter: NextRouter = {
     emit: () => {},
   },
   isFallback: false,
+  isReady: false,
 };
 
 const MockRouterProvider: React.FC = ({ children }) => {
