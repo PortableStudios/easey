@@ -40,6 +40,9 @@ module.exports = {
       transpiler.test = /(\.js|\.mjs)$/;
     }
 
+    // Insert our custom polyfill file in to the beginning of the entry point
+    config.entry.unshift('./src/polyfills.ts');
+
     // Copied from Chakra UI repo to make Chakra work correctly in Storybook
     // https://github.com/chakra-ui/chakra-ui/blob/e2a6237170a7c6b308235d81ebbf66786d01616d/.storybook/main.js#L11
     return {

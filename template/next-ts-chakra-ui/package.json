@@ -40,6 +40,8 @@
     "@sentry/node": "^6.0.1",
     "@sentry/webpack-plugin": "^1.14.0",
     "@types/gtag.js": "^0.0.4",
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "@webcomponents/shadydom": "^1.8.0",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "dotenv": "^8.2.0",
     "framer-motion": "^3.2.1",
@@ -49,7 +51,8 @@
     "polished": "^4.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
