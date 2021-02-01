@@ -57,7 +57,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@chakra-ui/system": "^1.1.7",
+    "@chakra-ui/system": "^1.2.1",
     "@chakra-ui/utils": "^1.1.0",
     "@cypress/webpack-preprocessor": "^5.5.0",
     "@portablestudios/figma2theme": "^0.4.5",
