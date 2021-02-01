@@ -37,7 +37,7 @@
     "@next/bundle-analyzer": "^10.0.5",
     "@portablestudios/chakra-flexboxgrid": "^0.3.2",
     "@sentry/browser": "^6.0.1",
-    "@sentry/node": "^6.0.1",
+    "@sentry/node": "^6.0.3",
     "@sentry/webpack-plugin": "^1.14.0",
     "@types/gtag.js": "^0.0.4",
     "@types/smoothscroll-polyfill": "^0.3.1",
