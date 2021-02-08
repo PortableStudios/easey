@@ -32,7 +32,7 @@
     "@chakra-ui/icon": "^1.1.0",
     "@chakra-ui/react": "^1.2.1",
     "@chakra-ui/theme-tools": "^1.0.3",
-    "@emotion/react": "^11.1.4",
+    "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "@next/bundle-analyzer": "^10.0.6",
     "@portablestudios/chakra-flexboxgrid": "^0.3.3",
