@@ -25,7 +25,7 @@
   "devDependencies": {
     "@ava/babel": "^1.0.1",
     "ava": "^3.15.0",
-    "husky": "^5.0.9",
+    "husky": "^5.2.0",
     "sao": "^1.7.1"
   },
   "engines": {
