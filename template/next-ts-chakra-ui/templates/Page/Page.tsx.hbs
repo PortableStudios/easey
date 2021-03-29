@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import type {
   NextPage,
   // GetServerSideProps,
@@ -17,7 +16,7 @@ type Props = {
 const {{name}}: NextPage<Props> = ({ timestamp }) => {
   return (
     <>
-      <Head>{generateMetaTags({ title: 'TODO' })}</Head>
+      {generateMetaTags({ title: 'TODO' })}
       <Flex role="main">
         <Heading>{timestamp}</Heading>
       </Flex>

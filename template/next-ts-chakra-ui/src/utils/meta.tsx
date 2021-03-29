@@ -1,20 +1,26 @@
 import React from 'react';
+import Head from 'next/head';
 
 export type MetaTagProps = {
   title?: string;
   description?: string;
   image?: string;
+  skipTitleSuffix?: boolean;
 };
 
 const generateMetaTags = ({
   title,
   description = 'This is a Portable website.',
   image = require('@/images/cover.jpg'),
+  skipTitleSuffix = false,
 }: MetaTagProps = {}) => {
-  const fullTitle = `${title} - Portable`;
-  const fullImageUrl = `${process.env.SITE_URL}${image}`;
+  const fullTitle = skipTitleSuffix ? title : `${title} - Portable`;
+  const fullImageUrl = image.startsWith('/')
+    ? `${process.env.SITE_URL}${image}`
+    : image;
+
   return (
-    <>
+    <Head>
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
@@ -26,7 +32,7 @@ const generateMetaTags = ({
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={fullImageUrl} />
-    </>
+    </Head>
   );
 };
 
