@@ -25,6 +25,7 @@ module.exports = withPlugins(
     [
       optimizedImagesPlugin,
       {
+        inlineImageLimit: -1,
         optimizeImagesInDev: true,
         // https://github.com/cyrilwanner/next-optimized-images/issues/114#issuecomment-634940408
         imagesFolder: 'chunks/images',
