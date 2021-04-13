@@ -96,7 +96,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
     "jest": "^26.6.3",
-    "jest-watch-typeahead": "^0.6.1",
+    "jest-watch-typeahead": "^0.6.2",
     "lint-staged": "^10.5.4",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
