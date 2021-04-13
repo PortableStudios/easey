@@ -8,6 +8,13 @@ const customTheme = {
   components: {
     ...theme.components,
     Button: button,
+    Heading: {
+      ...theme.components.Heading,
+      defaultProps: {
+        ...theme.components.Heading.defaultProps,
+        size: '',
+      },
+    },
   },
 };
 export type Theme = typeof customTheme;
