@@ -5,20 +5,10 @@ const withPlugins = require('next-compose-plugins');
 const sourceMapsPlugin = require('@zeit/next-source-maps');
 const bundleAnalyzerPlugin = require('@next/bundle-analyzer');
 const optimizedImagesPlugin = require('next-optimized-images');
-const transpileModulesPlugin = require('next-transpile-modules');
-
-const transpileModules = require('./transpileModules');
 
 module.exports = withPlugins(
   [
     sourceMapsPlugin(),
-    // Don't transpile `next` in production as it's unnecessary and can break functionality
-    // We found that head tags added using `next/head` were not rendered to the static HTML if `next` was transpiled
-    transpileModulesPlugin(
-      process.env.NODE_ENV === 'development'
-        ? transpileModules
-        : transpileModules.filter((m) => m !== 'next')
-    ),
     bundleAnalyzerPlugin({
       enabled: process.env.ANALYZE === 'true',
     }),

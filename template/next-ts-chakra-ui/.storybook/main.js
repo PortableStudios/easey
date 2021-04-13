@@ -1,5 +1,4 @@
 const path = require('path');
-const transpileModules = require('../transpileModules');
 
 const toPath = (_path) => path.join(process.cwd(), _path);
 
@@ -23,23 +22,6 @@ module.exports = {
     plugins: [...options.plugins, '@babel/plugin-transform-react-jsx'],
   }),
   webpackFinal: async (config) => {
-    // Find the loader that transpiles ES6 modules and add our list of modules to the regex
-    // https://github.com/storybookjs/storybook/blob/master/lib/core/src/server/common/es6Transpiler.ts
-    if (transpileModules.length > 0) {
-      const transpiler = config.module.rules.find((rule) => {
-        return (
-          rule.include instanceof RegExp &&
-          rule.include.source.includes(String.raw`[\\/]node_modules[\\/]`)
-        );
-      });
-      const regex = transpiler.include.source;
-      const modules = transpileModules.join('|');
-      transpiler.include = new RegExp(`${regex.slice(0, -1)}|${modules})`);
-      // Adjust transpilation test to include .mjs files (added to transpile `dequal` dependency)
-      // https://dev.to/crenshaw_dev/don-t-forget-to-ask-babel-to-compile-mjs-files-h85
-      transpiler.test = /(\.js|\.mjs)$/;
-    }
-
     // Insert our custom polyfill file in to the beginning of the entry point
     config.entry.unshift('./src/polyfills.ts');
 
