@@ -18,6 +18,4 @@ type Args = React.ComponentProps<typeof Home>;
 const Template: Story<Args> = (args) => <Home {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  timestamp: new Date().getTime(),
-};
+Default.args = {};
