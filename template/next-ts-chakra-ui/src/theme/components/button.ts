@@ -1,5 +1,5 @@
 // Example of how to customise the Chakra UI Button component
-// View the default theme: https://github.com/chakra-ui/chakra-ui/blob/master/packages/theme/src/components/button.ts
+// View the default theme: https://github.com/chakra-ui/chakra-ui/blob/main/packages/theme/src/components/button.ts
 
 import { theme } from '@chakra-ui/react';
 
