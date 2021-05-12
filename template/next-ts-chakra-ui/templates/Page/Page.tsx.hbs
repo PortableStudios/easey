@@ -18,7 +18,7 @@ const {{name}}: NextPage<Props> = ({ timestamp }) => {
     <>
       {generateMetaTags({ title: 'TODO' })}
       <Flex role="main">
-        <Heading>{timestamp}</Heading>
+        <Heading as="h1">{timestamp}</Heading>
       </Flex>
     </>
   );
