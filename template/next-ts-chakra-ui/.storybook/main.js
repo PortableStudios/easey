@@ -3,6 +3,9 @@ const path = require('path');
 const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
+  core: {
+    builder: "webpack5",
+  },
   stories: [
     '../node_modules/@portablestudios/chakra-flexboxgrid/lib/cjs/**/*.stories.js',
     '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
