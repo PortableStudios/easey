@@ -38,10 +38,21 @@ jobs:
         working-directory: ./test-project
         run: npm rebuild --update-binary
 
-      - name: Lint, typecheck, build and test the project
+      - name: Generate a React component using Plop
+        working-directory: ./test-project
+        run: yarn plop component "TestComponent" "ui" true true
+
+      - name: Generate a Next.js page using Plop
+        working-directory: ./test-project
+        run: yarn plop page "hello-world" "HelloWorld" true
+
+      - name: Lint, test and build the project
+        working-directory: ./test-project
+        run: yarn concurrently "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
+
+      - name: Run the Cypress tests
         working-directory: ./test-project
         run: |
-          yarn concurrently "yarn:test" "yarn:lint" "yarn:typecheck" "yarn:build"
           yarn start & npx wait-on http://localhost:3000
           yarn cypress:run
 
