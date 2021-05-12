@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { render } from '@/utils/testing';
+import { render, screen } from '@/utils/testing';
 
 import {{name}} from './{{name}}';
 
 describe('{{name}}', () => {
   test('renders', () => {
     const testId = 'test';
-    const { getByTestId } = render(<{{name}} data-testid={testId} />);
+    render(<{{name}} data-testid={testId} />);
 
-    getByTestId(testId);
+    screen.getByTestId(testId);
   });
 });

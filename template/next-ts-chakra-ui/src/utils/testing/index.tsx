@@ -1,5 +1,8 @@
 import React from 'react';
-import { render as rtlRender } from '@testing-library/react';
+import {
+  render as rtlRender,
+  screen as rtlScreen,
+} from '@testing-library/react';
 
 import AppProvider from '@/components/AppProvider';
 import MockRouterProvider from './MockRouterProvider';
@@ -13,3 +16,5 @@ export const render = (ui: React.ReactNode) => {
     ),
   };
 };
+
+export const screen = rtlScreen;
