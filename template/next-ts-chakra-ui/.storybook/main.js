@@ -4,7 +4,7 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   core: {
-    builder: "webpack5",
+    builder: 'webpack5',
   },
   stories: [
     '../node_modules/@portablestudios/chakra-flexboxgrid/lib/cjs/**/*.stories.js',
@@ -34,6 +34,10 @@ module.exports = {
       ...config,
       resolve: {
         ...config.resolve,
+        fallback: {
+          ...config.resolve.fallback,
+          crypto: false,
+        },
         alias: {
           ...config.resolve.alias,
           '@emotion/core': toPath('node_modules/@emotion/react'),
