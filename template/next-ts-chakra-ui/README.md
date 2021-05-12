@@ -1,6 +1,6 @@
 # <%= name %>
 
-This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) project bootstrapped with Portable's [`easey`](https://github.com/PortableStudios/sao-easey) generator.
+This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) project bootstrapped using Portable's [Easey](https://github.com/PortableStudios/sao-easey) generator.
 
 ## Getting Started
 
@@ -36,14 +36,13 @@ SITE_URL=http://localhost:3000
 
 ### 3. Start developing
 
-Install the dependencies and start the development server:
+Start the development server:
 
 ```bash
-yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
 ### 4. Open Storybook (optional)
 
@@ -53,7 +52,7 @@ While developing you may also want to run Storybook:
 yarn storybook
 ```
 
-Open [http://localhost:6006](http://localhost:6006) with your browser to view your UI library.
+Open [http://localhost:6006](http://localhost:6006) to view your component library.
 
 ## Generating theme from Figma file
 
@@ -154,8 +153,7 @@ The following features were included in this project by Portable's [`easey`](htt
   - Example layout components in the `components/layout` folder
   - Example page components in the `components/page` folder
   - Example social meta tags (see [`meta.tsx`](./src/utils/meta.tsx)) 
-  - Usage of `getServerSideProps` on the index page [(more info)](https://nextjs.org/docs/basic-features/data-fetching)
-  - An included Google Web Font (see [`_app.tsx`](./pages/_app.tsx) and [`preview-head.html`](./.storybook/preview-head.html))
+  - An included Google Web Font (see [`_document.tsx`](./pages/_document.tsx) and [`preview-head.html`](./.storybook/preview-head.html))
 
 ## Learn More
 
@@ -163,26 +161,25 @@ The following features were included in this project by Portable's [`easey`](htt
 
 To learn more about Next.js, take a look at the following resources:
 
+- [GitHub](https://github.com/vercel/next.js/)
 - [Documentation](https://nextjs.org/docs) - learn about Next.js features and API
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
 - [Awesome Next.js](https://github.com/unicodeveloper/awesome-nextjs) - community curated list of resources
-- [GitHub](https://github.com/vercel/next.js/)
 
 ### Chakra UI
 
 To learn more about Chakra UI, take a look at the following resources:
 
-- [Documentation](https://chakra-ui.com/docs/getting-started) - learn about Chakra UI features and API
-- [Storybook](https://chakra-ui.netlify.app/) - preview the 40+ components provided by Chakra UI, with examples
 - [GitHub](https://github.com/chakra-ui/chakra-ui/)
+- [Documentation](https://chakra-ui.com/docs/getting-started) - learn about Chakra UI features and API
 
 ### Storybook
 
 To learn more about Storybook, take a look at the following resources:
 
+- [GitHub](https://github.com/storybookjs/storybook)
 - [Documentation](https://storybook.js.org/docs/react/get-started/introduction) - learn about Storybook features and API
 - [Learn Storybook](https://www.learnstorybook.com/) - free in-depth guides, made by the Storybook maintainers
-- [GitHub](https://github.com/storybookjs/storybook)
 
 ## Commands
 
@@ -214,8 +211,15 @@ Run Jest tests:
 
 ```bash
 yarn test
+
 # generate code coverage
 yarn test:coverage
+```
+
+Lint, typecheck and run tests in parallel:
+
+```bash
+yarn verify
 ```
 
 Run Cypress tests:
@@ -223,8 +227,10 @@ Run Cypress tests:
 ```bash
 # start app in production mode
 yarn build && yarn start
-# run the tests
+
+# run the Cypress tests in headless mode
 yarn cypress:run
+
 # alternatively, open the Cypress UI
 yarn cypress:open
 ```
@@ -240,6 +246,7 @@ Generate page screenshots from Storybook:
 ```bash
 # start storybook
 yarn storybook
+
 # run storycap
 yarn screenshots
 ```

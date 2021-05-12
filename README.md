@@ -77,6 +77,8 @@ in Git and copied back to the template after testing.
 
 ### Next.js, with Chakra UI
 
+View the [`README.md`](./template/next-ts-chakra-ui/README.md) for more info
+
 - Next.js framework
 - TypeScript support
 - Chakra UI
@@ -90,8 +92,6 @@ in Git and copied back to the template after testing.
   - Sentry
   - Google Analytics
 - Various additional features and code examples
-
-(See [`README.md`](./template/next-ts-chakra-ui/README.md) for more info)
 
 ### NestJS
 

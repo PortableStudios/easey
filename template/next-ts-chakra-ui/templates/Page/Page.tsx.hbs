@@ -1,12 +1,12 @@
 import React from 'react';
+import { Flex, Heading } from '@chakra-ui/react';
 import type {
   NextPage,
   // GetServerSideProps,
   GetStaticProps,
 } from 'next';
-import { Flex, Heading } from '@chakra-ui/react';
 
-// import { Home } from '@/components/pages';
+// import { Page } from '@/components/pages';
 import generateMetaTags from '@/utils/meta';
 
 type Props = {
@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 // Incremental static regeneration (pre-render page in the background as traffic comes in)
-// https://nextjs.org/blog/next-9-5#stable-incremental-static-regeneration
+// https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
 // export const getStaticProps: GetStaticProps<Props> = async () => {
 //   const timestamp = new Date().getTime();
 //   return {
