@@ -36,6 +36,12 @@ SITE_URL=http://localhost:3000
 
 ### 3. Start developing
 
+Ensure you are using the correct Node version via [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md):
+
+```bash
+nvm use
+```
+
 Start the development server:
 
 ```bash
