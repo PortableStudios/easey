@@ -51,6 +51,11 @@ module.exports = {
         type: 'add',
         files: '**',
         templateDir: './template/next-ts-chakra-ui',
+        filters: {
+          '.next/**': false,
+          'node_modules/**': false,
+          'storybook-static/**': false,
+        },
         when: () => type === 'nextjs',
       },
       // Update package contents with answers

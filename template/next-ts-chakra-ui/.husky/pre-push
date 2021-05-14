@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run typecheck and tests before push
+yarn concurrently "yarn:typecheck" "yarn:test"

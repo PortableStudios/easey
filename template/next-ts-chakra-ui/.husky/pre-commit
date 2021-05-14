@@ -1,1 +1,5 @@
-yarn concurrently "yarn:test" "yarn:typecheck" "yarn:lint-staged"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Lint and format staged files before commit (see: .lintstagedrc)
+yarn lint-staged
