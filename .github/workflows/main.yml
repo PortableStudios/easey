@@ -40,7 +40,7 @@ jobs:
 
       - name: Generate a React component using Plop
         working-directory: ./test-project
-        run: yarn plop component "TestComponent" "ui" true true
+        run: yarn plop component "TestComponent" "ui" true true true
 
       - name: Generate a Next.js page using Plop
         working-directory: ./test-project

@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = (
   /** @type {import('plop').NodePlopAPI} */
   plop
@@ -25,6 +28,12 @@ module.exports = (
         type: 'confirm',
         name: 'test',
         message: 'generate a test?',
+        default: true,
+      },
+      {
+        type: 'confirm',
+        name: 'barrel',
+        message: 'create/update barrel file in parent folder?',
         default: true,
       },
     ],
@@ -57,6 +66,26 @@ module.exports = (
           path: 'src/components/{{folder}}/{{name}}/{{name}}.test.tsx',
           templateFile: 'templates/Component/Component.test.tsx.hbs',
         });
+      }
+      // Create or update the barrel file
+      if (data.barrel) {
+        const barrelExists = fs.existsSync(
+          path.resolve(__dirname, `./src/components/${data.folder}/index.ts`)
+        );
+        if (barrelExists) {
+          actions.push({
+            type: 'modify',
+            pattern: /(\n\n*)$/g,
+            path: 'src/components/{{folder}}/index.ts',
+            templateFile: 'templates/Component/barrel.ts.hbs',
+          });
+        } else {
+          actions.push({
+            type: 'add',
+            path: 'src/components/{{folder}}/index.ts',
+            templateFile: 'templates/Component/barrel.ts.hbs',
+          });
+        }
       }
       return actions;
     },
