@@ -41,7 +41,7 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "dotenv": "^9.0.2",
-    "framer-motion": "^4.1.15",
+    "framer-motion": "^4.1.17",
     "next": "10.2.0",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
