@@ -1,5 +1,5 @@
 // https://github.com/avanslaars/cypress-axe#in-cypress-plugins-file
-module.exports = (on) => {
+const conf: Cypress.PluginConfig = (on) => {
   on('task', {
     log(message) {
       console.log(message);
@@ -11,3 +11,5 @@ module.exports = (on) => {
     },
   });
 };
+
+export default conf;
