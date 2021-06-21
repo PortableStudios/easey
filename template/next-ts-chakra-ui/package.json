@@ -52,7 +52,7 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.1",
     "@chakra-ui/system": "^1.6.5",
     "@chakra-ui/utils": "^1.8.0",
