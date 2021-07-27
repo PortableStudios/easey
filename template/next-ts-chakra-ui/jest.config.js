@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  testEnvironment: 'jsdom',
   testMatch: ['**/?(*.)+(test).[jt]s?(x)'],
   setupFilesAfterEnv: [path.resolve(__dirname, './src/jestSetup.ts')],
   moduleNameMapper: {
