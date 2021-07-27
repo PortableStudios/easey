@@ -1,12 +1,12 @@
 import React from 'react';
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
 
-class Document extends NextDocument {
+class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const initialProps = await NextDocument.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
@@ -55,4 +55,4 @@ class Document extends NextDocument {
   }
 }
 
-export default Document;
+export default MyDocument;

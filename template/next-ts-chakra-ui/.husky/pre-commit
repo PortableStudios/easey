@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Lint and format staged files before commit (see: .lintstagedrc)
-yarn lint-staged
+yarn pre-commit

@@ -23,9 +23,7 @@ module.exports = withPlugins(
     ],
   ],
   {
-    future: {
-      webpack5: true,
-    },
+    webpack5: true,
     poweredByHeader: false,
     reactStrictMode: true,
     env: {
