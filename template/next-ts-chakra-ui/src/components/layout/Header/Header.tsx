@@ -1,6 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Flex, Icon, Image, Link, Stack } from '@chakra-ui/react';
+import NextImage from 'next/image';
+import { Flex, Icon, Link, Stack } from '@chakra-ui/react';
 import type { FlexProps, LinkProps } from '@chakra-ui/react';
 
 import {
@@ -9,6 +10,7 @@ import {
   TwitterIcon,
   YouTubeIcon,
 } from '@/theme/icons';
+import LogoImage from '@/images/logo.svg';
 
 type Props = FlexProps;
 
@@ -53,11 +55,7 @@ const Header: React.FC<Props> = ({ ...rest }) => {
         <NextLink href="/" passHref>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <Link>
-            <Image
-              alt="Portable Logo"
-              src={require('@/images/logo.svg')}
-              ignoreFallback
-            />
+            <NextImage alt="Portable Logo" src={LogoImage} />
           </Link>
         </NextLink>
         <Stack

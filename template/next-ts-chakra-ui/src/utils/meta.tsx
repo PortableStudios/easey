@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import MetaImage from '@/images/cover.jpg';
+
 export type MetaTagProps = {
   title?: string;
   description?: string;
@@ -11,7 +13,7 @@ export type MetaTagProps = {
 const generateMetaTags = ({
   title,
   description = 'This is a Portable website.',
-  image = require('@/images/cover.jpg'),
+  image = MetaImage.src,
   skipTitleSuffix = false,
 }: MetaTagProps = {}) => {
   const fullTitle = skipTitleSuffix ? title : `${title} - Portable`;

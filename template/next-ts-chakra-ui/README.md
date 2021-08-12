@@ -127,7 +127,6 @@ The following features were included in this project by Portable's [`easey`](htt
   - Custom [`_app.tsx`](./pages/_app.tsx), [`_document.tsx`](./pages/_document.tsx) and [`_error.tsx`](./pages/_error.tsx) components [(more info)](https://nextjs.org/docs/advanced-features/custom-app)
   - Example [`index.tsx`](./pages/index.tsx) and [`404.tsx`](./pages/404.tsx) pages [(more info)](https://nextjs.org/docs/basic-features/pages)
   - Example [`hello.ts`](./pages/api/hello.ts) API route [(more info)](https://nextjs.org/docs/api-routes/introduction)
-  - [`next-optimized-images`](https://github.com/cyrilwanner/next-optimized-images) plugin pre-configured
   - Absolute imports (e.g. `import Button from '@/components/Button'`)
 - [Chakra UI](https://chakra-ui.com/) library, with:
   - Default theme extended with examples (global styles, custom icons, component theming, etc.)

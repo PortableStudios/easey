@@ -4,23 +4,11 @@ const SentryWebpackPlugin = require('@sentry/webpack-plugin');
 const withPlugins = require('next-compose-plugins');
 const sourceMapsPlugin = require('@zeit/next-source-maps');
 const bundleAnalyzerPlugin = require('@next/bundle-analyzer');
-const optimizedImagesPlugin = require('next-optimized-images');
 
 module.exports = withPlugins(
   [
     sourceMapsPlugin(),
-    bundleAnalyzerPlugin({
-      enabled: process.env.ANALYZE === 'true',
-    }),
-    [
-      optimizedImagesPlugin,
-      {
-        inlineImageLimit: -1,
-        optimizeImagesInDev: true,
-        // https://github.com/cyrilwanner/next-optimized-images/issues/114#issuecomment-634940408
-        imagesFolder: 'chunks/images',
-      },
-    ],
+    bundleAnalyzerPlugin({ enabled: process.env.ANALYZE === 'true' }),
   ],
   {
     webpack5: true,
