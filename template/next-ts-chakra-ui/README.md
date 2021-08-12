@@ -133,7 +133,6 @@ The following features were included in this project by Portable's [`easey`](htt
   - Default theme extended with examples (global styles, custom icons, component theming, etc.)
   - [`react-icons`](https://github.com/react-icons/react-icons) library for access to a variety of icon sets
 - [figma2theme](https://github.com/PortableStudios/figma2theme), our custom tool for fetching design tokens from Figma
-- [chakra-flexboxgrid](https://github.com/PortableStudios/chakra-flexboxgrid), our custom Chakra UI components for creating flexbox-based grids
 - [Storybook](https://storybook.js.org/) tool, with:
   - Pre-installed addons: viewport, a11y, etc. [(more info)](https://storybook.js.org/addons/)
   - Example stories for pages and components (see `*.stories.tsx` files)

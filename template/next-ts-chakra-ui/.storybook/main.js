@@ -7,7 +7,6 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
-    '../node_modules/@portablestudios/chakra-flexboxgrid/lib/cjs/**/*.stories.js',
     '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
     '../src/**/*.stories.tsx',
   ],

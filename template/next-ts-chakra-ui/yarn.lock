@@ -3641,11 +3641,6 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
   integrity sha512-DvJbbn3dUgMxDnJLH+RZQPnXak1h4ZVYQ7CWiFWjQwBFkVajT4rfw2PdpHLTSTwxrYfnoEXkuBiwkDm6tPMQeA==
 
-"@portablestudios/chakra-flexboxgrid@^0.4.1":
-  version "0.4.1"
-  resolved "https://npm.pkg.github.com/download/@portablestudios/chakra-flexboxgrid/0.4.1/ae556f20a0d58fd01c8094858b5483560e20bd876865aad9fa621b622fd0630c#10449a46ed9519817994d13007e1630da52a4bc9"
-  integrity sha512-FrOOGH+PfU5m+eXaTvjSPWTRy49AbrBmGsLVcQAGCwRXaAXnXS87zufwxWNnQu843OG6tG858S3yhmukgImqZg==
-
 "@portablestudios/figma2theme@^0.5.9":
   version "0.5.9"
   resolved "https://npm.pkg.github.com/download/@portablestudios/figma2theme/0.5.9/03e3e4c54173591f4dabc33e7d36421a95bae4db95205c18e8394036f70661cb#6cb2f4b80f5a0eaf1ce01d2ae71a8ab5853c15e4"
