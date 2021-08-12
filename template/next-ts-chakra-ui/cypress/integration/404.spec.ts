@@ -5,9 +5,9 @@ describe('404', () => {
     cy.visit('/foobar', { failOnStatusCode: false });
   });
 
-  it('displays 404 message on load', () => {
+  it('displays "page not found" heading on load', () => {
     cy.visit('/foobar', { failOnStatusCode: false });
-    cy.findByText(/not found/i).should('be.visible');
+    cy.findByRole('heading', { name: /page not found/i }).should('be.visible');
   });
 
   it('returns 404 status code', () => {
