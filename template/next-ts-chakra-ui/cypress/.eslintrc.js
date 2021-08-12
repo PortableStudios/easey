@@ -11,6 +11,7 @@ module.exports = {
   extends: ['plugin:cypress/recommended'],
   rules: {
     'testing-library/await-async-query': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-console': 'off',
   },
 };
