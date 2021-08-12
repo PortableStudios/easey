@@ -1,6 +1,7 @@
-const path = require('path');
+import path from 'path';
+import type { Config } from '@jest/types';
 
-module.exports = {
+const config: Config.InitialOptions =  {
   testEnvironment: 'jsdom',
   testMatch: ['**/?(*.)+(test).[jt]s?(x)'],
   setupFilesAfterEnv: [path.resolve(__dirname, './src/jestSetup.ts')],
@@ -18,3 +19,5 @@ module.exports = {
     'jest-watch-typeahead/testname',
   ],
 };
+
+export default config;
