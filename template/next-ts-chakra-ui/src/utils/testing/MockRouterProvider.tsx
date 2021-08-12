@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import type { NextRouter } from 'next/router';
 
 // https://github.com/vercel/next.js/issues/7479#issuecomment-659859682
