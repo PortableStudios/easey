@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 // https://github.com/avanslaars/cypress-axe#in-cypress-plugins-file
 const conf: Cypress.PluginConfig = (on) => {
   on('task', {
