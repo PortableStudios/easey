@@ -3,8 +3,8 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
 import type { StoryWrapper } from '@storybook/addons';
 
-import AppProvider from '@/components/AppProvider';
-import MockRouterProvider from '@/utils/testing/MockRouterProvider';
+import AppProvider from '../src/components/AppProvider';
+import MockRouterProvider from '../src/utils/testing/MockRouterProvider';
 
 const withProviders: StoryWrapper = (Story, context) => {
   return (

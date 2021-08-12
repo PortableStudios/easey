@@ -27,6 +27,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".next", "storybook-static"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/*.tsx"],
+  "exclude": ["node_modules", ".next", "storybook-static", "cypress"]
 }

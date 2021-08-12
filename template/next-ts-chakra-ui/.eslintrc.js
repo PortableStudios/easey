@@ -12,12 +12,11 @@ module.exports = {
       plugins: ['react', '@typescript-eslint'],
       extends: [
         'plugin:react/recommended',
-        'airbnb-typescript',
         'plugin:prettier/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:testing-library/react',
-        'next',
+        'next/core-web-vitals',
       ],
       rules: {
         'react/prop-types': 0,
@@ -27,6 +26,7 @@ module.exports = {
         '@typescript-eslint/comma-dangle': 0,
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
+        '@typescript-eslint/no-empty-function': 0,
         '@typescript-eslint/indent': 0,
         '@typescript-eslint/no-unused-vars': [
           'warn',

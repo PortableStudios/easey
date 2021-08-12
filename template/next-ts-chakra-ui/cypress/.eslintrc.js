@@ -10,6 +10,7 @@ module.exports = {
   plugins: ['cypress'],
   extends: ['plugin:cypress/recommended'],
   rules: {
+    'testing-library/prefer-screen-queries': 'off',
     'testing-library/await-async-query': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-console': 'off',

@@ -1,7 +1,7 @@
 import path from 'path';
 import type { Config } from '@jest/types';
 
-const config: Config.InitialOptions =  {
+const config: Config.InitialOptions = {
   testEnvironment: 'jsdom',
   testMatch: ['**/?(*.)+(test).[jt]s?(x)'],
   setupFilesAfterEnv: [path.resolve(__dirname, './src/jestSetup.ts')],
