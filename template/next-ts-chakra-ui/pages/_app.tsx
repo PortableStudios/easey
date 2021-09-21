@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Router from 'next/router';
+import { Router } from 'next/router';
 import * as Sentry from '@sentry/node';
 import type { AppProps } from 'next/app';
 

@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies in the project
         working-directory: ./test-project
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         # Skip post-install scripts as malicious script could steal NODE_AUTH_TOKEN
         run: yarn install --frozen-lockfile --ignore-scripts
 

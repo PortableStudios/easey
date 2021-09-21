@@ -16,8 +16,20 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:testing-library/react',
-        'next/core-web-vitals',
+        'plugin:jsx-a11y/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
+        'plugin:@next/next/core-web-vitals',
       ],
+      settings: {
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
+        'import/resolver': {
+          typescript: {},
+        },
+      },
       rules: {
         'react/prop-types': 0,
         'react/jsx-props-no-spreading': 0,

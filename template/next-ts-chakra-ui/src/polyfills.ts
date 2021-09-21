@@ -1,6 +1,5 @@
-import smoothscroll from 'smoothscroll-polyfill';
+import { polyfill as smoothscroll } from 'smoothscroll-polyfill';
 
-smoothscroll.polyfill();
+smoothscroll();
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {};
