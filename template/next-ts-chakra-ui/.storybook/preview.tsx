@@ -2,9 +2,20 @@ import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
 import type { StoryWrapper } from '@storybook/addons';
+import * as NextImage from 'next/image'
 
 import AppProvider from '../src/components/AppProvider';
 import MockRouterProvider from '../src/utils/testing/MockRouterProvider';
+
+// Override `next/image` to prevent it throwing an error in Storybook
+// https://github.com/vercel/next.js/issues/18393#issuecomment-909636489
+const OriginalNextImage = NextImage.default
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (props: React.ComponentProps<typeof OriginalNextImage>) => (
+    <OriginalNextImage {...props} unoptimized loader={({ src }) => src} />
+  ),
+})
 
 const withProviders: StoryWrapper = (Story, context) => {
   return (
