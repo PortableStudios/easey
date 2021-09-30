@@ -13,7 +13,7 @@ type Props = {
   };
 } & StackProps;
 
-const Card: React.FC<Props> = ({ title, description, link, ...rest }) => {
+const Card = ({ title, description, link, ...rest }: Props) => {
   return (
     <Stack
       backgroundColor="teal.100"

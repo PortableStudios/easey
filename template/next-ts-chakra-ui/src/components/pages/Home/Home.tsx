@@ -7,7 +7,7 @@ import { Page } from '@/components/layout';
 
 type Props = FlexProps;
 
-const Home: React.FC<Props> = ({ ...rest }) => {
+const Home = ({ ...rest }: Props) => {
   return (
     <Page {...rest}>
       <Stack

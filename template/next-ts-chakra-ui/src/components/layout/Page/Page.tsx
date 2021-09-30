@@ -7,7 +7,7 @@ import Header from '../Header';
 
 type Props = FlexProps;
 
-const Page: React.FC<Props> = ({ children, ...rest }) => {
+const Page = ({ children, ...rest }: Props) => {
   return (
     <Flex
       alignItems="center"

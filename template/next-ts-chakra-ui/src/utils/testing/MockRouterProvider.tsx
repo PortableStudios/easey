@@ -26,7 +26,11 @@ const mockRouter: NextRouter = {
   isPreview: false,
 };
 
-const MockRouterProvider: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const MockRouterProvider = ({ children }: Props) => {
   return (
     <RouterContext.Provider value={mockRouter}>
       {children}

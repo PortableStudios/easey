@@ -18,11 +18,11 @@ type GetInitialProps = {
 };
 
 // Code based on https://github.com/zeit/next.js/tree/master/examples/with-sentry-simple
-const MyError: React.FC<Props> & GetInitialProps = ({
+const MyError: GetInitialProps = ({
   statusCode,
   hasGetInitialPropsRun,
   err,
-}) => {
+}: Props) => {
   if (!hasGetInitialPropsRun && err) {
     // Workaround for https://github.com/zeit/next.js/issues/8592
     Sentry.captureException(err);

@@ -8,7 +8,7 @@ import { Page } from '@/components/layout';
 
 type Props = FlexProps;
 
-const Error404: React.FC<Props> = ({ ...rest }) => {
+const Error404 = ({ ...rest }: Props) => {
   return (
     <Page backgroundColor="gray.900" {...rest}>
       <Flex

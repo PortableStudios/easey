@@ -12,28 +12,30 @@ import {
 } from '@/theme/icons';
 import LogoImage from '@/images/logo.svg';
 
-type Props = FlexProps;
+type SocialLinkProps = {
+  alt: string;
+  href: string;
+} & LinkProps;
 
-const SocialLink: React.FC<LinkProps & { alt: string; href: string }> = ({
-  alt,
-  href,
-  children,
-  ...rest
-}) => (
-  <Link
-    aria-label={alt}
-    href={href}
-    isExternal
-    lineHeight={1}
-    padding={3}
-    _hover={{ color: 'gray.400' }}
-    {...rest}
-  >
-    {children}
-  </Link>
-);
+const SocialLink = ({ alt, href, children, ...rest }: SocialLinkProps) => {
+  return (
+    <Link
+      aria-label={alt}
+      href={href}
+      isExternal
+      lineHeight={1}
+      padding={3}
+      _hover={{ color: 'gray.400' }}
+      {...rest}
+    >
+      {children}
+    </Link>
+  );
+};
 
-const Header: React.FC<Props> = ({ ...rest }) => {
+type HeaderProps = FlexProps;
+
+const Header = ({ ...rest }: HeaderProps) => {
   return (
     <Flex
       as="header"

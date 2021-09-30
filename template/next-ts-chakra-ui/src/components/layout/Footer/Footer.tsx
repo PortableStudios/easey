@@ -4,7 +4,7 @@ import type { FlexProps } from '@chakra-ui/react';
 
 type Props = FlexProps;
 
-const Footer: React.FC<Props> = ({ ...rest }) => {
+const Footer = ({ ...rest }: Props) => {
   return (
     <Flex
       as="footer"
