@@ -1,4 +1,4 @@
-import { theme, extendTheme, withDefaultProps } from '@chakra-ui/react';
+import { theme, extendTheme } from '@chakra-ui/react';
 
 import { button } from './components';
 import styles from './styles';
@@ -15,14 +15,6 @@ const customTheme = extendTheme(
       Button: button,
     },
   },
-  // Remove the default value for the Heading component "size" prop
-  // This fixes the "textStyle" prop sometimes being overriden by the default size
-  withDefaultProps({
-    defaultProps: {
-      size: '',
-    },
-    components: ['Heading'],
-  }),
   theme
 );
 export type Theme = typeof customTheme;
