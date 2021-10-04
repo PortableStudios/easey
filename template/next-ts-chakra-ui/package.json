@@ -59,7 +59,7 @@
     "@cypress/webpack-preprocessor": "^5.9.1",
     "@next/eslint-plugin-next": "^11.1.2",
     "@portablestudios/figma2theme": "^0.6.1",
-    "@storybook/addon-a11y": "^6.3.8",
+    "@storybook/addon-a11y": "^6.3.9",
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
     "@storybook/addon-storysource": "^6.3.8",
