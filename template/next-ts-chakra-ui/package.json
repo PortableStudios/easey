@@ -35,7 +35,7 @@
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@next/bundle-analyzer": "^12.0.4",
-    "@sentry/browser": "^6.14.3",
+    "@sentry/browser": "^6.16.1",
     "@sentry/node": "^6.14.3",
     "@sentry/webpack-plugin": "^1.18.3",
     "@types/gtag.js": "^0.0.8",
