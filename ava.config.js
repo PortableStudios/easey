@@ -1,4 +1,3 @@
-export default {
-  babel: true,
+module.exports = {
   files: ['test/**']
 }

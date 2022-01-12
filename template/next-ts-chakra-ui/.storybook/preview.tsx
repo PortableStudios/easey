@@ -21,12 +21,10 @@ Object.defineProperty(NextImage, 'default', {
   },
 });
 
-const withProviders: StoryWrapper = (Story, context) => {
+const withProviders: StoryWrapper = (getStory, context) => {
   return (
     <MockRouterProvider>
-      <AppProvider>
-        <Story {...context} />
-      </AppProvider>
+      <AppProvider>{getStory(context) as React.ReactNode}</AppProvider>
     </MockRouterProvider>
   );
 };

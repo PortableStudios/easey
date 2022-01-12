@@ -48,7 +48,7 @@ jobs:
 
       - name: Lint, test and build the project
         working-directory: ./test-project
-        run: yarn concurrently "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
+        run: yarn concurrently --group "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
 
       - name: Run the Cypress tests
         working-directory: ./test-project
