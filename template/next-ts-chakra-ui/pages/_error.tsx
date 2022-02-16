@@ -2,7 +2,7 @@ import React from 'react';
 import NextError from 'next/error';
 import type { ErrorProps } from 'next/error';
 import type { NextPageContext } from 'next';
-import * as Sentry from '@sentry/node';
+import * as Sentry from '@sentry/nextjs';
 
 type Props = {
   statusCode: number;

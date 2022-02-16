@@ -18,7 +18,7 @@ const generateMetaTags = ({
 }: MetaTagProps = {}) => {
   const fullTitle = skipTitleSuffix ? title : `${title} - Portable`;
   const fullImageUrl = image.startsWith('/')
-    ? `${process.env.SITE_URL}${image}`
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${image}`
     : image;
 
   return (
