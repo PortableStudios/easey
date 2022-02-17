@@ -1,6 +1,9 @@
 export const pageview = (url: string) => {
-  if (typeof window.gtag === 'function' && process.env.GA_TRACKING_ID) {
-    window.gtag('config', process.env.GA_TRACKING_ID, {
+  if (
+    typeof window.gtag === 'function' &&
+    process.env.NEXT_PUBLIC_GA_TRACKING_ID
+  ) {
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
       page_path: url,
     });
   }
@@ -14,7 +17,10 @@ type Event = {
   value?: string;
 };
 export const event = ({ action, category, label, value }: Event) => {
-  if (typeof window.gtag === 'function' && process.env.GA_TRACKING_ID) {
+  if (
+    typeof window.gtag === 'function' &&
+    process.env.NEXT_PUBLIC_GA_TRACKING_ID
+  ) {
     window.gtag('event', action, {
       event_category: category,
       event_label: label,

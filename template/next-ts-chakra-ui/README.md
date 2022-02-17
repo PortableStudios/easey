@@ -197,6 +197,13 @@ To learn more about Storybook, take a look at the following resources:
 - [Documentation](https://storybook.js.org/docs/react/get-started/introduction) - learn about Storybook features and API
 - [Learn Storybook](https://www.learnstorybook.com/) - free in-depth guides, made by the Storybook maintainers
 
+## Sentry
+
+To learn more about Sentry, take a look at the following resources:
+
+- [GitHub](https://github.com/getsentry/sentry-javascript)
+- [Documentation](https://docs.sentry.io/platforms/javascript/guides/nextjs/)
+
 ## Commands
 
 Run in development mode:
