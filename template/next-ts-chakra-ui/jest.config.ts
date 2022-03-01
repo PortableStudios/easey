@@ -1,13 +1,16 @@
-import path from 'path';
+import nextJest from 'next/jest';
 import type { Config } from '@jest/types';
 
-const config: Config.InitialOptions = {
-  testEnvironment: 'jsdom',
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig: Config.InitialOptions = {
+  testEnvironment: 'jest-environment-jsdom',
   testMatch: ['**/?(*.)+(test).[jt]s?(x)'],
-  setupFilesAfterEnv: [path.resolve(__dirname, './src/jestSetup.ts')],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)(\\?.*)?$':
-      path.resolve(__dirname, './__mocks__/fileMock.js'),
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   collectCoverageFrom: [
     '**/src/**/*.{ts,tsx}',
@@ -20,4 +23,4 @@ const config: Config.InitialOptions = {
   ],
 };
 
-export default config;
+export default createJestConfig(customJestConfig);
