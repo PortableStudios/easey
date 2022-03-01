@@ -13,6 +13,7 @@ module.exports = withPlugins(
   ],
   {
     webpack5: true,
+    swcMinify: true,
     poweredByHeader: false,
     reactStrictMode: true,
     webpack: (config) => {

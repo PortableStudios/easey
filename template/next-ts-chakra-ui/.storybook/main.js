@@ -21,7 +21,17 @@ module.exports = {
   // https://github.com/storybookjs/storybook/issues/12952#issuecomment-719871776
   babel: async (options) => ({
     ...options,
-    plugins: [...options.plugins, '@babel/plugin-transform-react-jsx'],
+    plugins: [
+      ...options.plugins,
+      '@babel/plugin-transform-react-jsx',
+      [
+        'module-resolver',
+        {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          alias: { '@': path.resolve(__dirname, '../src') },
+        },
+      ],
+    ],
   }),
   webpackFinal: async (config) => {
     // Insert our custom polyfill file in to the beginning of the entry point
