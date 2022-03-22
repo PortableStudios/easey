@@ -21,10 +21,13 @@ Object.defineProperty(NextImage, 'default', {
   },
 });
 
-const withProviders: StoryWrapper = (getStory, context) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const withProviders = (Story: any) => {
   return (
     <MockRouterProvider>
-      <AppProvider>{getStory(context) as React.ReactNode}</AppProvider>
+      <AppProvider>
+        <Story />
+      </AppProvider>
     </MockRouterProvider>
   );
 };
