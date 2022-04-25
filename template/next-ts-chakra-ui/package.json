@@ -38,7 +38,7 @@
     "@sentry/nextjs": "^6.19.6",
     "@types/gtag.js": "^0.0.10",
     "@types/smoothscroll-polyfill": "^0.3.1",
-    "framer-motion": "^6.2.10",
+    "framer-motion": "^6.3.2",
     "next": "12.1.5",
     "next-compose-plugins": "^2.2.1",
     "polished": "^4.2.2",
