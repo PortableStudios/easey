@@ -29,5 +29,16 @@ module.exports = {
       env: { 'cypress/globals': true },
       extends: ['plugin:cypress/recommended'],
     },
+    {
+      // Allow non-null assertions in tests and stories
+      files: [
+        '*.stories.{ts,tsx}',
+        '**/*.test.{ts,tsx}',
+        '**/cypress/**/*.{ts,tsx}',
+      ],
+      rules: {
+        '@typescript-eslint/no-non-null-assertion': 0,
+      },
+    },
   ],
 };
