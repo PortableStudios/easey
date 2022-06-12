@@ -1,7 +1,6 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
-import type { StoryWrapper } from '@storybook/addons';
 import * as NextImage from 'next/image';
 
 import AppProvider from '../src/components/AppProvider';
