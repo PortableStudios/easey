@@ -1,13 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
+  staticDirs: ['../public'],
   stories: [
     '../node_modules/@portablestudios/figma2theme/lib/**/*.stories.js',
     '../src/**/*.stories.tsx',
   ],
+  core: {
+    builder: 'webpack5',
+  },
   features: {
     emotionAlias: false,
   },
