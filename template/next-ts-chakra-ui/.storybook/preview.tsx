@@ -34,6 +34,7 @@ const withProviders = (Story: any) => {
 export const decorators = [withProviders, withScreenshot];
 
 export const parameters = {
+  actions: { argTypesRegex: '^on.*' },
   options: {
     // Sort categories alphabetically
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
