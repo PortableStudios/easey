@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Heading } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import type {
   NextPage,
   // GetServerSideProps,
@@ -18,7 +18,7 @@ const {{name}}: NextPage<Props> = ({ timestamp }) => {
     <>
       {generateMetaTags({ title: 'TODO' })}
       <Flex role="main">
-        <Heading as="h1">{timestamp}</Heading>
+        <Text as="h1">{timestamp}</Text>
       </Flex>
     </>
   );

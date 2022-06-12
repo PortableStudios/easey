@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoHeart } from 'react-icons/go';
-import { Heading, Icon, Stack, Text } from '@chakra-ui/react';
+import { Icon, Stack, Text } from '@chakra-ui/react';
 import type { FlexProps } from '@chakra-ui/react';
 
 import { Page } from '@/components/layout';
@@ -19,10 +19,20 @@ const Home = ({ ...rest }: Props) => {
         textAlign="center"
         width="100%"
       >
-        <Heading as="h1" fontSize={['2xl', '3xl']}>
+        <Text
+          as="h1"
+          alignItems="center"
+          fontSize={['2xl', '3xl']}
+          fontWeight="bold"
+        >
           Welcome to your new project{' '}
-          <Icon as={GoHeart} fontSize="1.5em" color="red" />
-        </Heading>
+          <Icon
+            as={GoHeart}
+            fontSize="1.5em"
+            color="red"
+            verticalAlign="middle"
+          />
+        </Text>
         <Text fontSize="xl">Check out the README to get started!</Text>
       </Stack>
     </Page>

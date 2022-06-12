@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Link, Stack, Text } from '@chakra-ui/react';
 import type { StackProps } from '@chakra-ui/react';
 
 import { rem } from 'polished';
@@ -23,7 +23,9 @@ const Card = ({ title, description, link, ...rest }: Props) => {
       spacing={{ base: 2, lg: 4 }}
       {...rest}
     >
-      <Heading fontSize={{ base: 'xl', lg: '2xl' }}>{title}</Heading>
+      <Text as="h2" fontSize={{ base: 'xl', lg: '2xl' }} fontWeight="bold">
+        {title}
+      </Text>
       {description && (
         <Text fontSize={{ base: 'lg', lg: 'xl' }}>{description}</Text>
       )}
