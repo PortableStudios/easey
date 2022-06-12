@@ -28,10 +28,10 @@ Finally, when prompted for "Email" enter your Portable email address.
 
 ### 2. Create your .env file
 
-Create an `.env` file with the following contents:
+Generate an `.env` file from the template and fill in the details as necessary:
 
 ```
-SITE_URL=http://localhost:3000
+cp .env.local.example .env
 ```
 
 ### 3. Start developing
@@ -39,7 +39,7 @@ SITE_URL=http://localhost:3000
 Ensure you are using the correct Node version via [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md):
 
 ```bash
-nvm use
+nvm install
 ```
 
 Start the development server:
