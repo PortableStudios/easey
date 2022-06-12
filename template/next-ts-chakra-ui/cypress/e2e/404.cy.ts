@@ -1,4 +1,4 @@
-import { logA11yViolations } from '../support/utils';
+import { checkA11y } from '../support/utils';
 
 describe('404', () => {
   it('loads successfully', () => {
@@ -18,7 +18,6 @@ describe('404', () => {
 
   it('has no detectable a11y violations on load', () => {
     cy.visit('/foobar', { failOnStatusCode: false });
-    cy.injectAxe();
-    cy.checkA11y(undefined, undefined, logA11yViolations);
+    checkA11y();
   });
 });

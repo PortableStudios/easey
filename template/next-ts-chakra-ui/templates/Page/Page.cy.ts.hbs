@@ -1,4 +1,4 @@
-import { logA11yViolations } from '{{#each upDir}}../{{/each}}support/utils';
+import { checkA11y } from '{{#each upDir}}../{{/each}}support/utils';
 
 describe('{{name}}', () => {
   it('loads successfully', () => {
@@ -7,7 +7,6 @@ describe('{{name}}', () => {
 
   it('has no detectable a11y violations on load', () => {
     cy.visit('/{{filename}}');
-    cy.injectAxe();
-    cy.checkA11y(undefined, undefined, logA11yViolations);
+    checkA11y();
   });
 });
