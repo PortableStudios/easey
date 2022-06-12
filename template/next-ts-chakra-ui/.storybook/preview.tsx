@@ -7,7 +7,7 @@ import AppProvider from '../src/components/AppProvider';
 import MockRouterProvider from '../src/utils/testing/MockRouterProvider';
 
 // Override `next/image` to prevent it throwing an error in Storybook
-// https://github.com/vercel/next.js/issues/18393#issuecomment-909636489
+// https://github.com/vercel/next.js/issues/36417#issuecomment-1117360509
 const OriginalNextImage = NextImage.default;
 Object.defineProperty(NextImage, 'default', {
   configurable: true,
@@ -18,6 +18,10 @@ Object.defineProperty(NextImage, 'default', {
       <OriginalNextImage {...props} unoptimized loader={({ src }) => src} />
     );
   },
+});
+Object.defineProperty(NextImage, '__esModule', {
+  configurable: true,
+  value: true,
 });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
