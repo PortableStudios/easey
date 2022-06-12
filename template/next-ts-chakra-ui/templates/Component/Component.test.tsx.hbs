@@ -1,13 +1,16 @@
 import React from 'react';
+import { composeStories } from '@storybook/testing-react';
 
 import { render, screen } from '@/utils/testing';
 
-import {{name}} from './{{name}}';
+import * as stories from './{{name}}.stories';
+
+const { Basic } = composeStories(stories);
 
 describe('{{name}}', () => {
   test('renders', () => {
     const testId = 'test';
-    render(<{{name}} data-testid={testId} />);
+    render(<Basic data-testid={testId} />);
 
     screen.getByTestId(testId);
   });
