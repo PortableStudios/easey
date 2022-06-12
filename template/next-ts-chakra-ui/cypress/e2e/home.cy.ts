@@ -1,4 +1,4 @@
-import { logA11yViolations } from '../support/utils';
+import { checkA11y } from '../support/utils';
 
 describe('Home', () => {
   it('loads successfully', () => {
@@ -7,7 +7,6 @@ describe('Home', () => {
 
   it('has no detectable a11y violations on load', () => {
     cy.visit('/');
-    cy.injectAxe();
-    cy.checkA11y(undefined, undefined, logA11yViolations);
+    checkA11y();
   });
 });

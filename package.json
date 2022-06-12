@@ -24,8 +24,8 @@
     "superb": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "^4.2.0",
-    "husky": "^7.0.4",
+    "ava": "^4.3.0",
+    "husky": "^8.0.1",
     "sao": "^1.7.1"
   },
   "engines": {
