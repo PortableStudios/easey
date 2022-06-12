@@ -1,9 +1,10 @@
 import React from 'react';
+import type { NextPage } from 'next';
 
 import { Error404 } from '@/components/pages';
 import generateMetaTags from '@/utils/meta';
 
-const Custom404 = () => {
+const Custom404: NextPage = () => {
   return (
     <>
       {generateMetaTags({
