@@ -32,7 +32,7 @@
     "@chakra-ui/icon": "^3.0.2",
     "@chakra-ui/react": "^2.2.1",
     "@chakra-ui/theme-tools": "^2.0.2",
-    "@emotion/react": "^11.9.0",
+    "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.8.1",
     "@next/bundle-analyzer": "^12.1.6",
     "@sentry/nextjs": "^7.1.1",
