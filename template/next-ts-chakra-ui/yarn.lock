@@ -4559,6 +4559,14 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
+"@storybook/client-logger@6.5.9":
+  version "6.5.9"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.5.9.tgz#dc1669abe8c45af1cc38f74c6f4b15ff33e63014"
+  integrity sha512-DOHL6p0uiDd3gV/Sb2FR+Vh6OiPrrf8BrA06uvXWsMRIIvEEvnparxv9EvPg7FlmUX0T3nq7d3juwjx4F8Wbcg==
+  dependencies:
+    core-js "^3.8.2"
+    global "^4.4.0"
+
 "@storybook/components@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.5.8.tgz#eb18cfcc4e88b7f4081b20b8a81b92d7ae9eaeac"
@@ -5045,13 +5053,23 @@
   dependencies:
     "@storybook/csf" "0.0.2--canary.87bc651.0"
 
-"@storybook/theming@6.5.8", "@storybook/theming@^6.5.8":
+"@storybook/theming@6.5.8":
   version "6.5.8"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.5.8.tgz#240a3c83ea53a9c7b1f3a2c47d6324f38ecb8771"
   integrity sha512-1VaKHqj38Ls1bJwDpg3+aEOlvVib/DCFkP6WYrP/AQtNAzxiyw5WkaoRlTVJZvCdu5TxjpG4O6/Ai5TI9QftIg==
   dependencies:
     "@storybook/client-logger" "6.5.8"
     core-js "^3.8.2"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/theming@^6.5.9":
+  version "6.5.9"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.5.9.tgz#13f60a3a3cd73ceb5caf9f188e1627e79f1891aa"
+  integrity sha512-KM0AMP5jMQPAdaO8tlbFCYqx9uYM/hZXGSVUhznhLYu7bhNAIK7ZVmXxyE/z/khM++8eUHzRoZGiO/cwCkg9Xw==
+  dependencies:
+    "@storybook/client-logger" "6.5.9"
+    core-js "^3.8.2"
+    memoizerific "^1.11.3"
     regenerator-runtime "^0.13.7"
 
 "@storybook/ui@6.5.8":
@@ -8387,12 +8405,7 @@ core-js-pure@^3.8.1:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.20.2.tgz#5d263565f0e34ceeeccdc4422fae3e84ca6b8c0f"
   integrity sha512-CmWHvSKn2vNL6p6StNp1EmMIfVY/pqn3JLAjfZQ8WZGPOlGoO92EkX9/Mk81i6GxvoPXjUqEQnpM3rJ5QxxIOg==
 
-core-js@^3.0.4, core-js@^3.6.5:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.8.0.tgz#0fc2d4941cadf80538b030648bb64d230b4da0ce"
-  integrity sha512-W2VYNB0nwQQE7tKS7HzXd7r2y/y2SVJl4ga6oH/dnaLFzM0o2lB2P3zCkWj5Wc/zyMYjtgd5Hmhk0ObkQFZOIA==
-
-core-js@^3.8.2:
+core-js@^3.0.4, core-js@^3.6.5, core-js@^3.8.2:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.9.1.tgz#cec8de593db8eb2a85ffb0dbdeb312cb6e5460ae"
   integrity sha512-gSjRvzkxQc1zjM/5paAmL4idJBFzuJoo+jDjF1tStYFMV2ERfD02HhahhCGXUyHxQRG4yFKVSdO6g62eoRMcDg==
