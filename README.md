@@ -36,7 +36,7 @@ First, please ensure that you can install Portable GitHub packages by following 
 Once you're authenticated you can generate your project using the following command:
 
 ```bash
-npx sao PortableStudios/easey -u my-project
+npx sao PortableStudios/easey#main -u my-project
 ```
 
 Now install the dependencies and create your initial commit:
