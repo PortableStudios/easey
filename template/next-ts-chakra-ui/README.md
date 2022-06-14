@@ -1,6 +1,6 @@
 # <%= name %>
 
-This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) project bootstrapped using Portable's [Easey](https://github.com/PortableStudios/sao-easey) generator.
+This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/) project bootstrapped using Portable's [Easey](https://github.com/PortableStudios/easey) generator.
 
 ## Getting Started
 
@@ -132,7 +132,7 @@ the templates can be found in the `/templates` folder.
 
 ## Included
 
-The following features were included in this project by Portable's [`easey`](https://github.com/PortableStudios/sao-easey) generator:
+The following features were included in this project by Portable's [`easey`](https://github.com/PortableStudios/easey) generator:
 
 - [Next.js](https://nextjs.org/) framework, with:
   - TypeScript support [(more info)](https://nextjs.org/docs/basic-features/typescript)
@@ -151,7 +151,7 @@ The following features were included in this project by Portable's [`easey`](htt
 - [ESLint](https://eslint.org/) tool, with:
   - [Prettier](https://prettier.io/) formatting
   - Customised [Airbnb config](https://github.com/airbnb/javascript) plus recommended rules for React, TypeScript, React Testing Library and Cypress Testing Library
-  - Autorun on pre-commit using [`husky`](https://github.com/typicode/husky) and [`lint-staged`](https://github.com/okonet/lint-staged) 
+  - Autorun on pre-commit using [`husky`](https://github.com/typicode/husky) and [`lint-staged`](https://github.com/okonet/lint-staged)
   - VSCode configuration
 - [Plop](https://plopjs.com/) tool, with:
   - Templates for generating a React component with a story and a Jest test
@@ -168,7 +168,7 @@ The following features were included in this project by Portable's [`easey`](htt
   - Example custom icons for Chakra UI (see [`theme/icons.tsx`](./src/theme/icons.tsx))
   - Example layout components in the `components/layout` folder
   - Example page components in the `components/page` folder
-  - Example social meta tags (see [`meta.tsx`](./src/utils/meta.tsx)) 
+  - Example social meta tags (see [`meta.tsx`](./src/utils/meta.tsx))
   - An included Google Web Font (see [`_document.tsx`](./pages/_document.tsx) and [`preview-head.html`](./.storybook/preview-head.html))
 
 ## Learn More

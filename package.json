@@ -1,5 +1,5 @@
 {
-  "name": "sao-easey",
+  "name": "easey",
   "version": "1.0.0",
   "description": "Portable scaffolding tool for web applications.",
   "author": "Lee Briggs <lee@portable.com.au> (github.com/theleebriggs)",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "PortableStudios/sao-easey"
+    "url": "PortableStudios/easey"
   },
   "files": [
     "saofile.js",
