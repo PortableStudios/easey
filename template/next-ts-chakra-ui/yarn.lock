@@ -3964,10 +3964,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.10.2.tgz#0798c03351f0dea1a5a4cabddf26a55a7cbee590"
   integrity sha512-IXf3XA7+XyN7CP9gGh/XB0UxVMlvARGEgGXLubFICsUMGz6Q+DU+i4gGlpOxTjKvXjkJDJC8YdqdKkDj9qZHEQ==
 
-"@portablestudios/figma2theme@^0.6.8":
-  version "0.6.8"
-  resolved "https://npm.pkg.github.com/download/@portablestudios/figma2theme/0.6.8/d0d2a01e3f2b8090e863ef253fcec09c863ddaf59552df9bad41ae50718e3ece#bbede97ca9a12431b39e7d346c604a91b8d64164"
-  integrity sha512-l746r9BZ6b/vBvRfYPDv3w6W3ksJHXMdkZcMElDPhfK+p94vW8kzwQjLq6Z0Kim5U5LVaTo3ZmM9Vf0SZITthA==
+"@portablestudios/figma2theme@^0.6.9":
+  version "0.6.9"
+  resolved "https://npm.pkg.github.com/download/@portablestudios/figma2theme/0.6.9/4d798e042999db5ee160debee875bcce2648259fef9863035a49b924129276f4#d56c5a205acfa186f7e9374063c77a0fe15f0801"
+  integrity sha512-ctsfWxeOIRdR6lEq0it8ZW2um/Vf8Jf1ZPxSzx4oojYrEWWc2Pr4XC0SqTSfjVJLbgNrm1iBRjEC4csXkVAfHg==
   dependencies:
     "@types/color-convert" "^2.0.0"
     "@types/ejs" "^3.1.1"
@@ -3986,7 +3986,7 @@
     lodash.setwith "^4.3.2"
     node-fetch "^2.6.7"
     polished "^4.2.2"
-    prettier "^2.6.2"
+    prettier "^2.7.0"
     prompts "^2.4.2"
     svg-to-jsx "^1.0.4"
     svgo "^2.8.0"
@@ -15812,10 +15812,10 @@ prettier-linter-helpers@^1.0.0:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
   integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
-prettier@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
-  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
+prettier@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.0.tgz#a4fdae07e5596c51c9857ea676cd41a0163879d6"
+  integrity sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==
 
 pretty-bytes@^5.6.0:
   version "5.6.0"
