@@ -60,44 +60,26 @@ in Git and copied back to the template after testing.
 
 ## Stacks
 
-### Frontend
+### Next.js with Chakra UI
 
-- Next.js, with Chakra UI
+Built on the [Next.js](https://nextjs.org/) framework, with
+[TypeScript](https://www.typescriptlang.org/) support and using:
 
-### API
-
-- NestJS (coming soon)
-
-## Included
-
-### Common files
-
-- .gitignore
-- .gitattributes
-- .editorconfig
-- .nvmrc
-
-### Next.js, with Chakra UI
-
-View the [`README.md`](./template/next-ts-chakra-ui/README.md) for more info
-
-- Next.js framework
-- TypeScript support
-- Chakra UI
-- Storybook
-- Plop
-- ESLint
-- Prettier
-- Jest, with React Testing Library
-- Cypress, with Cypress Testing Library
-- Third-party integrations
-  - Sentry
-  - Google Analytics
+- [Chakra UI](https://chakra-ui.com/), an accessible and themeable component library
+- [Storybook](https://storybook.js.org/), for building and testing components in isolation
+- [Jest](https://jestjs.io/), for writing unit tests
+  - with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) integration for better testing practices
+- [Cypress](https://www.cypress.io/) for writing end-to-end tests
+  - with [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro) integration for better testing practices
+- [ESLint](https://eslint.org/), for identifying code problems
+- [Prettier](https://prettier.io/), for consistent code formatting
+- [Plop](https://plopjs.com/), for generating code (e.g. a component with stories and tests)
+- Built-in third-party integrations:
+  - [Sentry](https://sentry.io/welcome/), for error tracking and performance monitoring
+  - [Google Analytics](https://analytics.google.com/analytics/web/), for monitoring traffic
 - Various additional features and code examples
 
-### NestJS
-
-- Coming soon
+View the [`README.md`](./template/next-ts-chakra-ui/README.md) for more info.
 
 ## License
 
