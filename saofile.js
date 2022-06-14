@@ -1,9 +1,9 @@
-const superb = require('superb');
+const superb = require("superb");
 
 const stacks = [
   {
-    name: 'Front End (Next.js, with Chakra UI)',
-    value: 'nextjs',
+    name: "Next.js with Chakra UI",
+    value: "nextjs",
   },
 ];
 
@@ -11,27 +11,27 @@ module.exports = {
   prompts() {
     return [
       {
-        name: 'name',
-        message: 'What is the name of the new project',
+        name: "name",
+        message: "What is the name of the new project",
         default: this.outFolder,
         filter: (val) => val.toLowerCase(),
       },
       {
-        name: 'description',
-        message: 'How would you describe the new project',
+        name: "description",
+        message: "How would you describe the new project",
         default: `my ${superb.random()} project`,
       },
       {
-        name: 'author',
+        name: "author",
         message:
-          'What is your name and email? (e.g. John Smith <john@portable.com.au>)',
+          "What is your name and email? (e.g. John Smith <john@portable.com.au>)",
         default: `${this.gitUser.name} <${this.gitUser.email}>`,
         store: true,
       },
       {
-        name: 'type',
-        message: 'What is your stack?',
-        type: 'list',
+        name: "type",
+        message: "What is your stack?",
+        type: "list",
         choices: stacks,
       },
     ];
@@ -42,26 +42,26 @@ module.exports = {
     return [
       // Copy the common files over
       {
-        type: 'add',
-        files: '**',
-        templateDir: './template/common',
+        type: "add",
+        files: "**",
+        templateDir: "./template/common",
       },
       // Copy specific stacks based on answers
       {
-        type: 'add',
-        files: '**',
-        templateDir: './template/next-ts-chakra-ui',
+        type: "add",
+        files: "**",
+        templateDir: "./template/next-ts-chakra-ui",
         filters: {
-          '.next/**': false,
-          'node_modules/**': false,
-          'storybook-static/**': false,
+          ".next/**": false,
+          "node_modules/**": false,
+          "storybook-static/**": false,
         },
-        when: () => type === 'nextjs',
+        when: () => type === "nextjs",
       },
       // Update package contents with answers
       {
-        type: 'modify',
-        files: 'package.json',
+        type: "modify",
+        files: "package.json",
         handler(data) {
           return {
             name: name,
@@ -77,5 +77,11 @@ module.exports = {
   async completed() {
     this.gitInit();
     this.showProjectTips();
+    // Make the `husky` hook files executable
+    const outDir = this.sao.opts.outDir;
+    await Promise.all([
+      this.fs.chmod(`${outDir}/.husky/pre-commit`, 0o775),
+      this.fs.chmod(`${outDir}/.husky/pre-push`, 0o775),
+    ]);
   },
 };
