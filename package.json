@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "ava": "^4.3.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.3",
     "sao": "^1.7.1"
   },
   "engines": {
