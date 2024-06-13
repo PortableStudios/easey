@@ -5,7 +5,7 @@ import type { Styles } from '@chakra-ui/theme-tools';
 const styles: Styles = {
   global: {
     // Make our page containers fill the height of the browser
-    'html, body, #root, #__next': {
+    'html, body, #storybook-root, #__next': {
       height: '100%',
     },
   },
