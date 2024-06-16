@@ -4,29 +4,7 @@ This is a [Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/)
 
 ## Getting Started
 
-### 1. Authenticate via NPM
-
-To ensure you can install private Portable packages, login to our GitHub repo via NPM:
-
-(This only has to be done once per computer, skip this step if you've already done this)
-
-```bash
-npm login --registry=https://npm.pkg.github.com
-```
-
-When prompted for "Username", enter your GitHub username.
-
-When prompted for "Password", enter a "Personal Access Token".
-To generate a token follow these instructions:
-
-- In GitHub visit Settings > Developer settings > Personal access tokens
-- Press "Generate new token"
-- Name the new token "portable_npm_login" or something similar
-- Select the "repo", "write:packages" and "read:packages" permissions
-
-Finally, when prompted for "Email" enter your Portable email address.
-
-### 2. Create your .env file
+### 1. Create your .env file
 
 Generate an `.env` file from the template and fill in the details as necessary:
 
@@ -34,7 +12,7 @@ Generate an `.env` file from the template and fill in the details as necessary:
 cp .env.local.example .env
 ```
 
-### 3. Start developing
+### 2. Start developing
 
 Ensure you are using the correct Node version via [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md):
 
@@ -50,7 +28,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-### 4. Open Storybook (optional)
+### 3. Open Storybook (optional)
 
 While developing you may also want to run Storybook:
 
@@ -70,7 +48,7 @@ Figma file URL, here's an example using the URL of our Figma template:
 
 ```json
 {
-  "fileUrl": "https://www.figma.com/file/m1rARkfdPU6dB7n9ofBRHw/Portable-UI-Kit"
+  "fileUrl": "https://www.figma.com/design/b6tcOWalyHLDfsD0IBSXyE/Portable-UI-Kit-v2"
 }
 ```
 
@@ -112,7 +90,6 @@ stories to check that your tokens are being loaded successfully.
 
 If the Figma project includes layout grid styles, the script will also generate a
 `grids.ts` file which will contain "grid config" objects corresponding to each style.
-These configs can be used with our [chakra-flexboxgrid](https://github.com/PortableStudios/chakra-flexboxgrid) library.
 
 ## Code Generation
 

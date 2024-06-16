@@ -11,9 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@portablestudios"
+          node-version-file: '.nvmrc'
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -26,17 +24,9 @@ jobs:
           yarn sao . test-project --answers \
             '{ "name": "test-project", "description": "Cool project", "author": "John Smith <john@portable.com.au>", "type": "nextjs" }'
 
-      # https://github.com/actions/setup-node#usage
       - name: Install dependencies in the project
         working-directory: ./test-project
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        # Skip post-install scripts as malicious script could steal NODE_AUTH_TOKEN
-        run: yarn install --frozen-lockfile --ignore-scripts
-
-      - name: Run post-install scripts
-        working-directory: ./test-project
-        run: npm rebuild --update-binary
+        run: yarn install --frozen-lockfile
 
       - name: Generate a React component using Plop
         working-directory: ./test-project
