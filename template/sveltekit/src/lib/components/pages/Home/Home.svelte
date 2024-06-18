@@ -18,7 +18,7 @@
 		<Button variant="primary">Primary</Button>
 		<Button variant="secondary">Secondary</Button>
 		<Button variant="outline">Outline</Button>
-		<Button variant="link">Link</Button>
+		<Button href="/" variant="link">Link</Button>
 	</div>
 	<p>The built-in button sizes:</p>
 	<div class="flex w-full flex-wrap items-center justify-center gap-4">
