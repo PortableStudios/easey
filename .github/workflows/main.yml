@@ -5,7 +5,8 @@ on:
     branches:
       - main
 jobs:
-  build:
+  test-sao:
+    name: Run SAO tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,6 +19,17 @@ jobs:
 
       - name: Run SAO tests
         run: yarn test
+  test-nextjs:
+    name: Generate a Next.js project and run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Generate a Next.js project
         run: |
@@ -38,13 +50,60 @@ jobs:
 
       - name: Lint, test and build the project
         working-directory: ./test-project
-        run: yarn concurrently --group "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
+        run: yarn concurrently --group --timings "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
 
       - name: Run the Cypress tests
         working-directory: ./test-project
         run: |
           yarn start & npx wait-on http://localhost:3000
           yarn cypress:run
+
+      - name: Archive the project
+        uses: actions/upload-artifact@v2
+        with:
+          name: project
+          path: |
+            test-project/**
+            !**/node_modules/**
+  test-sveltekit:
+    name: Generate a SvelteKit project and run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate a SvelteKit project
+        run: |
+          yarn sao . test-project --answers \
+            '{ "name": "test-project", "description": "Cool project", "author": "John Smith <john@portable.com.au>", "type": "sveltekit" }'
+
+      - name: Install dependencies in the project
+        working-directory: ./test-project
+        run: yarn install --frozen-lockfile
+
+      - name: Generate a Svelte component using Plop
+        working-directory: ./test-project
+        run: yarn plop component "TestComponent" "ui" true true true && yarn format
+
+      - name: Generate a SvelteKit page using Plop
+        working-directory: ./test-project
+        run: yarn plop page "hello-world" "HelloWorld" true && yarn format
+
+      - name: Lint, test and build the project
+        working-directory: ./test-project
+        run: yarn playwright install && yarn concurrently --group --timings "yarn:check" "yarn:lint" "yarn:test:unit" "yarn:test:integration" "yarn:build" "yarn:build-storybook"
+
+      - name: Run the Storybook tests
+        working-directory: ./test-project
+        run: |
+          yarn concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+          "yarn http-server storybook-static --port 6006 --silent" \
+          "yarn wait-on tcp:6006 && yarn test-storybook"
 
       - name: Archive the project
         uses: actions/upload-artifact@v2

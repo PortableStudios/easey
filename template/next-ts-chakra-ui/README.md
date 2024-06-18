@@ -40,7 +40,7 @@ Open [http://localhost:6006](http://localhost:6006) to view your component libra
 
 ## Generating theme from Figma file
 
-If the project Figma file was created from the [Portable UI Kit](https://www.figma.com/file/m1rARkfdPU6dB7n9ofBRHw/Portable-UI-Kit) template
+If the project Figma file was created from the [Portable UI Kit](https://www.figma.com/design/b6tcOWalyHLDfsD0IBSXyE/Portable-UI-Kit-v2) template
 you can use our [`figma2theme`](https://github.com/PortableStudios/figma2theme) tool to generate a Chakra UI theme.
 
 First, create a `.figma2themerc` file in your project containing the

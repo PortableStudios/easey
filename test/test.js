@@ -21,3 +21,21 @@ test("Next.js template", async (t) => {
   t.is(pkg.author, answers.author);
   t.deepEqual(pkg.contributors, [answers.author]);
 });
+
+// Generate a project using the "SvelteKit" option
+test("SvelteKit template", async (t) => {
+  const answers = {
+    name: "portable-project",
+    description: "A thing that does stuff",
+    author: "John Smith <john@portable.com.au>",
+    type: "sveltekit",
+  };
+  const stream = await sao.mock({ generator }, answers);
+
+  // Read the generated package.json and check the information is correct
+  const pkg = JSON.parse(await stream.readFile("package.json"));
+  t.is(pkg.name, answers.name);
+  t.is(pkg.description, answers.description);
+  t.is(pkg.author, answers.author);
+  t.deepEqual(pkg.contributors, [answers.author]);
+});

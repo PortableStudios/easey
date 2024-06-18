@@ -8,6 +8,24 @@ Built using the [SAO](https://github.com/saojs/sao) framework.
 
 ## Stacks
 
+### SvelteKit with Tailwind CSS
+
+Built on the [SvelteKit](https://kit.svelte.dev/) framework, with
+[TypeScript](https://www.typescriptlang.org/) support and:
+
+- [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework
+- [figma2theme](https://github.com/PortableStudios/figma2theme), our tool for generating a Tailwind theme from a Figma UI Kit file
+- [Storybook](https://storybook.js.org/) for building and testing components in isolation
+- [Vitest](https://vitest.dev/) for writing unit tests
+  - with [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/) integration for better testing practices
+- [Playwright](https://playwright.dev/) for writing end-to-end tests
+- [ESLint](https://eslint.org/) for identifying code problems
+- [Prettier](https://prettier.io/) for consistent code formatting
+- [Plop](https://plopjs.com/) for generating boilerplate (e.g. a component with a story and a test)
+- Various additional features and code examples
+
+View the [`README.md`](./template/sveltekit/README.md) for more info.
+
 ### Next.js with Chakra UI
 
 Built on the [Next.js](https://nextjs.org/) framework, with
