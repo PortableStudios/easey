@@ -2,7 +2,7 @@
 	import { tv } from 'tailwind-variants';
 
 	export const styles = tv({
-		base: 'inline-flex items-center justify-center rounded-[5rem] border-2 border-transparent bg-transparent text-center text-lg font-bold text-white aria-disabled:cursor-not-allowed',
+		base: 'inline-flex items-center justify-center rounded-[5rem] border-2 border-transparent bg-transparent text-center text-[1.125rem] font-bold text-white aria-disabled:cursor-not-allowed',
 		variants: {
 			variant: {
 				primary: 'bg-blue-600 hover:bg-blue-700 active:bg-blue-500 aria-disabled:bg-blue-400',
@@ -14,7 +14,7 @@
 			},
 			size: {
 				default: 'px-3 py-2',
-				sm: 'text-md p-2',
+				sm: 'p-2 text-[1rem]',
 			},
 		},
 		defaultVariants: {
