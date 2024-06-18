@@ -1,28 +1,9 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withScreenshot } from 'storycap';
-import * as NextImage from 'next/image';
 
 import AppProvider from '../src/components/AppProvider';
 import MockRouterProvider from '../src/utils/testing/MockRouterProvider';
-
-// Override `next/image` to prevent it throwing an error in Storybook
-// https://github.com/vercel/next.js/issues/36417#issuecomment-1117360509
-const OriginalNextImage = NextImage.default;
-Object.defineProperty(NextImage, 'default', {
-  configurable: true,
-  value: function NextImage(
-    props: React.ComponentProps<typeof OriginalNextImage>
-  ) {
-    return (
-      <OriginalNextImage {...props} unoptimized loader={({ src }) => src} />
-    );
-  },
-});
-Object.defineProperty(NextImage, '__esModule', {
-  configurable: true,
-  value: true,
-});
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const withProviders = (Story: any) => {
@@ -35,18 +16,11 @@ const withProviders = (Story: any) => {
   );
 };
 
-export const decorators = [withProviders, withScreenshot];
+const decorators = [withProviders, withScreenshot()];
 
-export const parameters = {
+const parameters = {
   actions: { argTypesRegex: '^on.*' },
-  options: {
-    // Sort categories alphabetically
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    storySort: (a: any, b: any) =>
-      a[1].kind === b[1].kind
-        ? 0
-        : a[1].id.localeCompare(b[1].id, { numeric: true }),
-  },
+  options: { storySort: { method: 'alphabetical' } },
   viewport: {
     viewports: {
       cheapLaptop: {
@@ -140,3 +114,10 @@ export const parameters = {
     },
   },
 };
+
+const config = {
+  decorators,
+  parameters,
+};
+
+export default config;

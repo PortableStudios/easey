@@ -1,10 +1,10 @@
 import { cleanup } from '@testing-library/react';
-import { setGlobalConfig } from '@storybook/testing-react';
+import { setProjectAnnotations } from '@storybook/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import * as globalStorybookConfig from './.storybook/preview';
+import globalStorybookConfig from './.storybook/preview';
 
-setGlobalConfig(globalStorybookConfig);
+setProjectAnnotations(globalStorybookConfig);
 
 afterEach(() => {
   cleanup();

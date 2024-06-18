@@ -16,20 +16,17 @@
     "template"
   ],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "pre-push": "yarn test",
     "test": "ava"
   },
-  "dependencies": {
-    "superb": "^4.0.0"
-  },
   "devDependencies": {
-    "ava": "^4.3.0",
-    "husky": "^8.0.1",
+    "ava": "^6.1.3",
+    "husky": "^9.0.11",
     "sao": "^1.7.1"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }

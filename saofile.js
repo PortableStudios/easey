@@ -1,5 +1,3 @@
-const superb = require("superb");
-
 const stacks = [
   {
     name: "Next.js with Chakra UI",
@@ -19,7 +17,6 @@ module.exports = {
       {
         name: "description",
         message: "How would you describe the new project",
-        default: `my ${superb.random()} project`,
       },
       {
         name: "author",
