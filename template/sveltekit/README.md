@@ -67,10 +67,14 @@ yarn update-theme
 
 This will generate a Tailwind theme and save the file to `./tailwind.figma2theme.js`.
 
-Open your `tailwind.config.js` file and add the following line to the top of the config:
+Open your `tailwind.config.js` file and add the generated theme to your `presets` array like so:
 
 ```js
-presets: [require('./tailwind.figma2theme.js')],
+import figmaPreset from './tailwind.figma2theme.js';
+
+/** @type {import('tailwindcss').Config} */
+const config = {
+	presets: [figmaPreset],
 ```
 
 This setting will use the generated theme as the base for your Tailwind configuration,
