@@ -119,7 +119,7 @@ export default function (
 				templateFile: 'templates/Page/+page.svelte.hbs',
 			});
 			if (data.test) {
-				// Generate Cypress test file
+				// Generate Playwright test file
 				actions.push({
 					type: 'add',
 					path: 'tests/{{filename}}.spec.ts',
