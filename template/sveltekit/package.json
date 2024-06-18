@@ -54,7 +54,7 @@
 		"concurrently": "^8.2.2",
 		"eslint": "^9.5.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.39.5",
+		"eslint-plugin-svelte": "^2.40.0",
 		"figma2theme": "^0.9.1",
 		"globals": "^15.6.0",
 		"http-server": "^14.1.1",
