@@ -5646,10 +5646,10 @@ figma-api@1.7.0:
     "@types/node" "12.0.2"
     axios "^0.21.1"
 
-figma2theme@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/figma2theme/-/figma2theme-0.9.0.tgz#fde96abeb8fde2a30e6d6fa8d21120d12f7b5e49"
-  integrity sha512-39t5BUK0CnQwn1xDUh/GYJISYN3shyWVIBx0KcZCXF+nAIZAWIUuxQDY4lIBbw80QJy4LM0b+dIp0TP0lX6QHQ==
+figma2theme@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/figma2theme/-/figma2theme-0.9.1.tgz#73ab644e38da86fa3bafd6c64dee55b8e303201f"
+  integrity sha512-2YzSqg1g+TQ1AjgsIs+jnLnNEsGqDOaS/RlRpNblRcHS2tK1VL0b0cYsUbJLyWC+tNRJlAMghWlhoBgzMl+QuQ==
   dependencies:
     "@types/ejs" "^3.1.1"
     "@types/fs-extra" "^9.0.13"
