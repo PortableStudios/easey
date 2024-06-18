@@ -1,5 +1,9 @@
 const stacks = [
   {
+    name: "SvelteKit with Tailwind CSS",
+    value: "sveltekit",
+  },
+  {
     name: "Next.js with Chakra UI",
     value: "nextjs",
   },
@@ -12,7 +16,7 @@ module.exports = {
         name: "name",
         message: "What is the name of the new project",
         default: this.outFolder,
-        filter: (val) => val.toLowerCase(),
+        filter: (val) => val.toLowerCase().replace(/\s+/g, "-"),
       },
       {
         name: "description",
@@ -44,6 +48,17 @@ module.exports = {
         templateDir: "./template/common",
       },
       // Copy specific stacks based on answers
+      {
+        type: "add",
+        files: "**",
+        templateDir: "./template/sveltekit",
+        filters: {
+          ".svelte-kit/**": false,
+          "node_modules/**": false,
+          "storybook-static/**": false,
+        },
+        when: () => type === "sveltekit",
+      },
       {
         type: "add",
         files: "**",

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply flex min-h-dvh flex-col bg-slate-100 text-slate-900;
+		font-family: 'Inter Variable', sans-serif;
+	}
+
+	#storybook-root:not([hidden='true']) {
+		@apply flex min-h-dvh flex-col;
+	}
+
+	/* Add a custom, animated focus ring for all focusable elements */
+	a,
+	button,
+	input,
+	select,
+	textarea {
+		@apply transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F18701] focus-visible:ring-offset-2;
+	}
+}

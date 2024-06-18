@@ -1,0 +1,13 @@
+import '@testing-library/jest-dom';
+import { describe, /* expect, */ it } from 'vitest';
+/* import { screen } from '@testing-library/svelte'; */
+
+import { render } from '$lib/utils/testing';
+
+import { {{name}} } from '.';
+
+describe('<{{name}} />', () => {
+	it('renders', async () => {
+		render({{name}});
+	});
+});

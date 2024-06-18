@@ -1,0 +1,18 @@
+<script context="module" lang="ts">
+	import type { Meta } from '@storybook/svelte';
+
+	import { {{name}} } from '.';
+
+	export const meta = {
+		title: '{{titleCase folder}}/{{name}}',
+		component: {{name}},
+	} satisfies Meta<{{name}}>;
+</script>
+
+<script lang="ts">
+	import { Story } from '@storybook/addon-svelte-csf';
+</script>
+
+<Story name="Default">
+	<{{name}} />
+</Story>
