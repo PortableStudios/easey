@@ -10,7 +10,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"plop": "plop",
-		"update-theme": "figma2theme generate-tailwind -o ./src/theme/_generated",
+		"update-theme": "figma2theme generate-tailwind",
 		"test": "yarn test:integration && yarn test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
