@@ -9,57 +9,61 @@ jobs:
     name: Run SAO tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run SAO tests
-        run: yarn test
+        run: pnpm test
   test-nextjs:
     name: Generate a Next.js project and run tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Generate a Next.js project
         run: |
-          yarn sao . test-project --answers \
+          pnpm sao . test-project --answers \
             '{ "name": "test-project", "description": "Cool project", "author": "John Smith <john@portable.com.au>", "type": "nextjs" }'
 
       - name: Install dependencies in the project
         working-directory: ./test-project
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Generate a React component using Plop
         working-directory: ./test-project
-        run: yarn plop component "TestComponent" "ui" true true true
+        run: pnpm plop component "TestComponent" "ui" true true true
 
       - name: Generate a Next.js page using Plop
         working-directory: ./test-project
-        run: yarn plop page "hello-world" "HelloWorld" true
+        run: pnpm plop page "hello-world" "HelloWorld" true
 
       - name: Lint, test and build the project
         working-directory: ./test-project
-        run: yarn concurrently --group --timings "yarn:test" "yarn:lint" "yarn:build" "yarn:build-storybook"
+        run: pnpm concurrently --group --timings "pnpm:test" "pnpm:lint" "pnpm:build" "pnpm:build-storybook"
 
       - name: Run the Cypress tests
         working-directory: ./test-project
         run: |
-          yarn start & npx wait-on http://localhost:3000
-          yarn cypress:run
+          pnpm start & pnpm dlx wait-on http://localhost:3000
+          pnpm cypress:run
 
       - name: Archive the project
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v7
         with:
           name: project
           path: |
@@ -69,44 +73,46 @@ jobs:
     name: Generate a SvelteKit project and run tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Generate a SvelteKit project
         run: |
-          yarn sao . test-project --answers \
+          pnpm sao . test-project --answers \
             '{ "name": "test-project", "description": "Cool project", "author": "John Smith <john@portable.com.au>", "type": "sveltekit" }'
 
       - name: Install dependencies in the project
         working-directory: ./test-project
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Generate a Svelte component using Plop
         working-directory: ./test-project
-        run: yarn plop component "TestComponent" "ui" true true true && yarn format
+        run: pnpm plop component "TestComponent" "ui" true true true && pnpm format
 
       - name: Generate a SvelteKit page using Plop
         working-directory: ./test-project
-        run: yarn plop page "hello-world" "HelloWorld" true && yarn format
+        run: pnpm plop page "hello-world" "HelloWorld" true && pnpm format
 
       - name: Lint, test and build the project
         working-directory: ./test-project
-        run: yarn playwright install && yarn concurrently --group --timings "yarn:check" "yarn:lint" "yarn:test:unit" "yarn:test:integration" "yarn:build" "yarn:build-storybook"
+        run: pnpm exec playwright install --with-deps chromium && pnpm concurrently --group --timings "pnpm:check" "pnpm:lint" "pnpm:test:unit" "pnpm:test:integration" "pnpm:build" "pnpm:build-storybook"
 
       - name: Run the Storybook tests
         working-directory: ./test-project
         run: |
-          yarn concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-          "yarn http-server storybook-static --port 6006 --silent" \
-          "yarn wait-on tcp:6006 && yarn test-storybook"
+          pnpm concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+          "pnpm http-server storybook-static --port 6006 --silent" \
+          "pnpm wait-on tcp:6006 && pnpm test-storybook"
 
       - name: Archive the project
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v7
         with:
           name: project
           path: |

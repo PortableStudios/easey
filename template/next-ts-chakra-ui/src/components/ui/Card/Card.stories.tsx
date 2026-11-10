@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 
 import Card from './Card';
 
@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 type Args = React.ComponentProps<typeof Card>;
-const Template: Story<Args> = (args) => <Card {...args} />;
+const Template: StoryFn<Args> = (args) => <Card {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {

@@ -54,17 +54,14 @@ const Header = ({ ...rest }: HeaderProps) => {
         paddingBottom={[3, 6]}
         width="100%"
       >
-        <NextLink href="/" passHref>
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <Link>
-            <NextImage
-              alt="Portable Logo"
-              src={LogoImage}
-              height={30}
-              width={168}
-            />
-          </Link>
-        </NextLink>
+        <Link as={NextLink} href="/">
+          <NextImage
+            alt="Portable Logo"
+            src={LogoImage}
+            height={30}
+            width={168}
+          />
+        </Link>
         <Stack
           color="white"
           direction="row"

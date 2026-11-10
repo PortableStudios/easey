@@ -1,12 +1,14 @@
-import nextJest from 'next/jest';
-import type { Config } from '@jest/types';
+import nextJest from 'next/jest.js';
+import type { Config } from 'jest';
 
 const createJestConfig = nextJest({
   dir: './',
 });
 
-const customJestConfig: Config.InitialOptions = {
+const customJestConfig: Config = {
   testEnvironment: 'jest-environment-jsdom',
+  // Resolve non-relative imports from the project root to match `baseUrl` in `tsconfig.json`
+  modulePaths: ['<rootDir>'],
   testMatch: ['**/?(*.)+(test).[jt]s?(x)'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {

@@ -124,7 +124,7 @@ module.exports = (
         // Generate Cypress test file
         actions.push({
           type: 'add',
-          path: 'cypress/integration/{{filename}}.cy.ts',
+          path: 'cypress/e2e/{{filename}}.cy.ts',
           templateFile: 'templates/Page/Page.cy.ts.hbs',
           data: { upDir },
         });

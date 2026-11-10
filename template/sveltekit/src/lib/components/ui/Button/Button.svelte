@@ -31,7 +31,8 @@
 
 	import { Icon } from '$lib/components/ui';
 
-	type $$Props = ButtonPrimitive.Props & {
+	type $$Props = Omit<ButtonPrimitive.Props, 'class'> & {
+		class?: string;
 		variant?: VariantProps<typeof styles>['variant'];
 		size?: VariantProps<typeof styles>['size'];
 		disabled?: boolean;

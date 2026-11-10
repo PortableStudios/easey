@@ -1,0 +1,15 @@
+minimumReleaseAge: 10080 # refuse to install any dependencies less than 7 days old
+
+allowBuilds:
+  ejs: false # postinstall only prints a thank-you message
+
+# Patch vulnerable transitive dependencies of sao (unmaintained) and ava.
+# Remaining known issues without upstream fixes: decompress, git-clone (via sao>download-git-repo).
+overrides:
+  ejs@<3.1.10: ^3.1.10
+  braces@<3.0.3: ^3.0.3
+  micromatch@<4.0.8: ^4.0.8
+  cross-spawn@<6.0.6: ^6.0.6
+  tmp@<0.2.6: ^0.2.6
+  glob@>=9.0.0 <14.0.2: ^14.0.2
+  minimatch@>=7.0.0 <11.0.1: ^11.0.1

@@ -1,9 +1,11 @@
-<script context="module" lang="ts">
-	import type { Meta } from '@storybook/svelte';
+<script module lang="ts">
+	import { defineMeta } from '@storybook/addon-svelte-csf';
+
+	import { Icon } from '$lib/components/ui';
 
 	import { Button, styles } from '.';
 
-	export const meta = {
+	const { Story } = defineMeta({
 		title: 'UI/Button',
 		component: Button,
 		tags: ['autodocs'],
@@ -25,14 +27,10 @@
 			variant: styles.defaultVariants.variant,
 			size: styles.defaultVariants.size,
 		},
-	} satisfies Meta<Button>;
+	});
 </script>
 
 <script lang="ts">
-	import { Story, Template } from '@storybook/addon-svelte-csf';
-
-	import { Icon } from '$lib/components/ui';
-
 	let count = 0;
 	function handleClick(e: MouseEvent) {
 		const button = e.currentTarget as HTMLButtonElement;
@@ -44,44 +42,52 @@
 	}
 </script>
 
-<Template let:args>
-	<Button {...args} on:click on:click={handleClick}>
+{#snippet template(args: Record<string, unknown>)}
+	<Button {...args} on:click={handleClick}>
 		You've clicked {count} times
 	</Button>
-</Template>
+{/snippet}
 
-<Story name="Default" />
+<Story name="Default" {template} />
 
 <Story name="With Icon">
-	<Button class="self-start" on:click on:click={handleClick}>
-		<Icon name="check" class="mr-2 h-5 w-5" />
-		You've clicked {count} times
-	</Button>
+	{#snippet template()}
+		<Button class="self-start" on:click={handleClick}>
+			<Icon name="check" class="mr-2 h-5 w-5" />
+			You've clicked {count} times
+		</Button>
+	{/snippet}
 </Story>
 
 <Story name="With Wrapped Text">
-	<Button class="max-w-96 self-start">
-		This is a really long button label that will definitely wrap to 2 lines
-	</Button>
+	{#snippet template()}
+		<Button class="max-w-96 self-start">
+			This is a really long button label that will definitely wrap to 2 lines
+		</Button>
+	{/snippet}
 </Story>
 
 <Story name="With Icon and Wrapped Text">
-	<Button class="max-w-96 self-start">
-		<Icon name="check" class="mr-2 h-5 w-5" />
-		This is a really long button label that will definitely wrap to 2 lines
-	</Button>
+	{#snippet template()}
+		<Button class="max-w-96 self-start">
+			<Icon name="check" class="mr-2 h-5 w-5" />
+			This is a really long button label that will definitely wrap to 2 lines
+		</Button>
+	{/snippet}
 </Story>
 
-<Story name="Small" args={{ size: 'sm' }} />
+<Story name="Small" args={{ size: 'sm' }} {template} />
 
-<Story name="Disabled" args={{ disabled: true }} />
+<Story name="Disabled" args={{ disabled: true }} {template} />
 
-<Story name="Loading" args={{ loading: true }} />
+<Story name="Loading" args={{ loading: true }} {template} />
 
-<Story name="Secondary" args={{ variant: 'secondary' }} />
+<Story name="Secondary" args={{ variant: 'secondary' }} {template} />
 
-<Story name="Outline" args={{ variant: 'outline' }} />
+<Story name="Outline" args={{ variant: 'outline' }} {template} />
 
-<Story name="Link" let:args args={{ variant: 'link', href: '/' }}>
-	<Button {...args}>Home</Button>
+<Story name="Link" args={{ variant: 'link', href: '/' }}>
+	{#snippet template(args: Record<string, unknown>)}
+		<Button {...args}>Home</Button>
+	{/snippet}
 </Story>

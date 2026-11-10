@@ -27,11 +27,14 @@ const Error404 = ({ ...rest }: Props) => {
           >
             Page not found
           </Text>
-          <NextLink href="/" passHref>
-            <Button as="a" colorScheme="white" leftIcon={<FaArrowLeft />}>
-              Back to home
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            href="/"
+            colorScheme="white"
+            leftIcon={<FaArrowLeft />}
+          >
+            Back to home
+          </Button>
         </Stack>
       </Flex>
     </Page>

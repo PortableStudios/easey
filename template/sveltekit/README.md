@@ -20,10 +20,16 @@ Ensure you are using the correct Node version via [NVM](https://github.com/nvm-s
 nvm install
 ```
 
+Install the dependencies with [pnpm](https://pnpm.io/):
+
+```bash
+pnpm install
+```
+
 Start the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open http://localhost:5173 to see the app.
@@ -33,7 +39,7 @@ Open http://localhost:5173 to see the app.
 While developing you may also want to run Storybook to see your components in isolation:
 
 ```bash
-yarn storybook
+pnpm storybook
 ```
 
 Open http://localhost:6006 to see your component library.
@@ -62,7 +68,7 @@ FIGMA_API_KEY=
 Now run the following command:
 
 ```bash
-yarn update-theme
+pnpm update-theme
 ```
 
 This will generate a Tailwind theme and save the file to `./tailwind.figma2theme.js`.
@@ -88,7 +94,7 @@ For more information on this setting see the Tailwind docs: https://tailwindcss.
 [Plop](https://plopjs.com/) is included in this project to allow us to quickly generate code.
 
 ```bash
-yarn plop
+pnpm plop
 ```
 
 Currently the available options are:
