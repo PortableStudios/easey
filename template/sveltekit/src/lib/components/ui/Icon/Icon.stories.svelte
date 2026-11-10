@@ -1,5 +1,5 @@
-<script context="module" lang="ts">
-	import type { Meta } from '@storybook/svelte';
+<script module lang="ts">
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import spriteContents from '$lib/assets/icons.svg?raw';
 
@@ -10,7 +10,7 @@
 		.match(/<symbol id="([^"]+)"/g)!
 		.map((match) => match.match(/<symbol id="([^"]+)"/)![1]);
 
-	export const meta = {
+	const { Story } = defineMeta({
 		title: 'UI/Icon',
 		component: Icon,
 		argTypes: {
@@ -21,24 +21,20 @@
 			class: 'text-slate-600 h-24 w-24',
 			name: iconNames[0],
 		},
-	} satisfies Meta<Icon>;
+	});
 </script>
 
-<script lang="ts">
-	import { Story } from '@storybook/addon-svelte-csf';
-</script>
+<Story name="One Icon" />
 
-<Story name="One Icon" let:args>
-	<Icon {...args} />
-</Story>
-
-<Story name="All Icons" let:args>
-	<div class="flex flex-wrap gap-8">
-		{#each iconNames as name}
-			<div class="flex flex-col items-center gap-2">
-				<Icon {...args} {name} />
-				<p class="text-sm text-slate-600">{name}</p>
-			</div>
-		{/each}
-	</div>
+<Story name="All Icons">
+	{#snippet template(args)}
+		<div class="flex flex-wrap gap-8">
+			{#each iconNames as name (name)}
+				<div class="flex flex-col items-center gap-2">
+					<Icon {...args} {name} />
+					<p class="text-sm text-slate-600">{name}</p>
+				</div>
+			{/each}
+		</div>
+	{/snippet}
 </Story>

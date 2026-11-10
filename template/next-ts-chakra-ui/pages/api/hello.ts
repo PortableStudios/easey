@@ -1,4 +1,3 @@
-import { withSentry } from '@sentry/nextjs';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Response = {
@@ -14,4 +13,5 @@ const handler = async (
   res.status(200).json({ response: 'Hello world!' });
 };
 
-export default withSentry(handler);
+// API routes are instrumented by Sentry automatically
+export default handler;

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
-import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import type { NextRouter } from 'next/router';
 
 // https://github.com/vercel/next.js/issues/7479#issuecomment-659859682
@@ -14,6 +14,7 @@ const mockRouter: NextRouter = {
   replace: () => new Promise((_, reject) => reject()),
   reload: () => {},
   back: () => {},
+  forward: () => {},
   prefetch: () => new Promise((_, reject) => reject()),
   beforePopState: () => {},
   events: {

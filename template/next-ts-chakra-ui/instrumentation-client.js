@@ -1,4 +1,4 @@
-// This file configures the initialization of Sentry on the browser.
+// This file configures the initialization of Sentry in the browser.
 // The config you add here will be used whenever a page is visited.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
@@ -12,3 +12,5 @@ Sentry.init({
   enabled: SENTRY_ENVIRONMENT !== '',
   tracesSampleRate: 0.01,
 });
+
+export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;

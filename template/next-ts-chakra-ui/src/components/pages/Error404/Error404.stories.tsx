@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 
 import Error404 from './Error404';
 
@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 type Args = React.ComponentProps<typeof Error404>;
-const Template: Story<Args> = (args) => <Error404 {...args} />;
+const Template: StoryFn<Args> = (args) => <Error404 {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

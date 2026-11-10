@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 
 import Home from './Home';
 
@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 type Args = React.ComponentProps<typeof Home>;
-const Template: Story<Args> = (args) => <Home {...args} />;
+const Template: StoryFn<Args> = (args) => <Home {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

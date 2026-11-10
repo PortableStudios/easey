@@ -1,21 +1,15 @@
-<script context="module" lang="ts">
-	import type { Meta } from '@storybook/svelte';
+<script module lang="ts">
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
 	import { Home } from '.';
 
-	export const meta = {
+	const { Story } = defineMeta({
 		title: 'Pages/Home',
 		component: Home,
 		parameters: {
 			layout: 'fullscreen',
 		},
-	} satisfies Meta<Home>;
+	});
 </script>
 
-<script lang="ts">
-	import { Story } from '@storybook/addon-svelte-csf';
-</script>
-
-<Story name="Default">
-	<Home />
-</Story>
+<Story name="Default" />

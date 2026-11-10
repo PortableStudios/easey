@@ -1,0 +1,18 @@
+minimumReleaseAge: 10080 # refuse to install any dependencies less than 7 days old
+
+allowBuilds:
+  esbuild: true # installs the platform-specific binary
+  '@swc/core': false # native binary is provided via optionalDependencies
+  svelte-preprocess: false # postinstall only prints a message
+
+# Patch vulnerable transitive dependencies where the fixed release is API-compatible.
+# Known issues without upstream fixes: lodash.setwith (via figma2theme), deepmerge.
+overrides:
+  axios@<0.34.0: '>=0.34.0 <1' # via figma2theme>figma-api
+  xml2js@<0.5.0: ^0.5.0 # via figma2theme>svg-to-jsx
+  glob@>=9.0.0 <14.0.2: ^14.0.2
+  minimatch@>=7.0.0 <11.0.1: ^11.0.1
+  '@babel/runtime@<7.26.10': ^7.26.10
+  yaml@<1.10.3: ^1.10.3
+  uuid@<11.1.1: ^11.1.1
+  cookie@<0.7.0: ^0.7.0

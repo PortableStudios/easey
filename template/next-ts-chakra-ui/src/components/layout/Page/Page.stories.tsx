@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 
 import Page from './Page';
 
@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 type Args = React.ComponentProps<typeof Page>;
-const Template: Story<Args> = (args) => <Page {...args} />;
+const Template: StoryFn<Args> = (args) => <Page {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

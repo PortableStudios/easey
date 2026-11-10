@@ -2,3 +2,4 @@
 coverage
 storybook-static
 out
+next-env.d.ts

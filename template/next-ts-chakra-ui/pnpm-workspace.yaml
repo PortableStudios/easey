@@ -1,0 +1,28 @@
+minimumReleaseAge: 10080 # refuse to install any dependencies less than 7 days old
+
+allowBuilds:
+  esbuild: true # installs the platform-specific binary
+  cypress: true # downloads the Cypress binary
+  '@swc/core': false # native binary is provided via optionalDependencies
+  '@sentry/cli': false # only needed when uploading source maps in CI
+  core-js: false # postinstall only prints a message
+  core-js-pure: false # postinstall only prints a message
+  unrs-resolver: false # native binary is provided via optionalDependencies
+  sharp: false # native binary is provided via optionalDependencies
+  '@parcel/watcher': false # native binary is provided via optionalDependencies
+
+# Patch vulnerable transitive dependencies where the fixed release is API-compatible.
+# Known issues without a compatible fix: lodash.setwith (via figma2theme), extract-zip and
+# decode-uri-component (via storycap), image-size (via @storybook/nextjs), elliptic, deepmerge.
+overrides:
+  # Storybook mixes this webpack's plugins with the copy bundled in Next.js (5.98.0).
+  # Newer releases add parser hooks the bundled copy lacks and break `build-storybook`.
+  webpack: ~5.100.2
+  axios@<0.34.0: '>=0.34.0 <1' # via figma2theme>figma-api
+  xml2js@<0.5.0: ^0.5.0 # via figma2theme>svg-to-jsx
+  postcss@<8.5.23: ^8.5.23 # Next.js pins an older version
+  sharp@<0.35.5: ^0.35.5 # via @storybook/nextjs
+  webpack-dev-middleware@<7.4.5: ^7.4.5 # via @storybook/builder-webpack5
+  glob@>=9.0.0 <14.0.2: ^14.0.2
+  minimatch@>=7.0.0 <11.0.1: ^11.0.1
+  uuid@<11.1.1: ^11.1.1

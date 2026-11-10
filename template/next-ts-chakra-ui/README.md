@@ -20,10 +20,16 @@ Ensure you are using the correct Node version via [NVM](https://github.com/nvm-s
 nvm install
 ```
 
+Install the dependencies with [pnpm](https://pnpm.io/):
+
+```bash
+pnpm install
+```
+
 Start the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the result.
@@ -33,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the result.
 While developing you may also want to run Storybook:
 
 ```bash
-yarn storybook
+pnpm storybook
 ```
 
 Open [http://localhost:6006](http://localhost:6006) to view your component library.
@@ -62,7 +68,7 @@ FIGMA_API_KEY=
 Now run the following command:
 
 ```bash
-yarn update-theme
+pnpm update-theme
 ```
 
 This will generate a Chakra UI theme and save the file(s) to `./src/theme/_generated`.
@@ -96,7 +102,7 @@ If the Figma project includes layout grid styles, the script will also generate 
 [Plop](https://plopjs.com/) is included in this project to allow us to quickly generate code.
 
 ```bash
-yarn plop
+pnpm plop
 ```
 
 Currently the available options are:
@@ -186,69 +192,69 @@ To learn more about Sentry, take a look at the following resources:
 Run in development mode:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Run in production mode:
 
 ```bash
-yarn build && yarn start
+pnpm build && pnpm start
 ```
 
 Run linter:
 
 ```bash
-yarn lint
+pnpm lint
 ```
 
 Run typechecker:
 
 ```bash
-yarn typecheck
+pnpm typecheck
 ```
 
 Run Jest tests:
 
 ```bash
-yarn test
+pnpm test
 
 # generate code coverage
-yarn test:coverage
+pnpm test:coverage
 ```
 
 Lint, typecheck and run tests in parallel:
 
 ```bash
-yarn verify
+pnpm verify
 ```
 
 Run Cypress tests:
 
 ```bash
 # start app in production mode
-yarn build && yarn start
+pnpm build && pnpm start
 
 # run the Cypress tests in headless mode
-yarn cypress:run
+pnpm cypress:run
 
 # alternatively, open the Cypress UI
-yarn cypress:open
+pnpm cypress:open
 ```
 
 Analyze bundle size (server and client):
 
 ```bash
-yarn analyze
+pnpm analyze
 ```
 
 Generate page screenshots from Storybook:
 
 ```bash
 # start storybook
-yarn storybook
+pnpm storybook
 
 # run storycap
-yarn screenshots
+pnpm screenshots
 ```
 
 You can find the generated screenshots in the `/__screenshots__` folder.

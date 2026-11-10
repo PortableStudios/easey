@@ -8,10 +8,8 @@ import { Button } from '.';
 
 describe('<Button />', () => {
 	it('fires click event when pressed', async () => {
-		const { component, user } = render(Button);
-
 		const handleClick = vi.fn();
-		component.$on('click', handleClick);
+		const { user } = render(Button, { events: { click: handleClick } });
 
 		await user.click(screen.getByRole('button'));
 		expect(handleClick).toHaveBeenCalledTimes(1);
